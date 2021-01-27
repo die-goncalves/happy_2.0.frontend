@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="72"
+   viewBox="0 0 64 72"
+   fill="none"
+   version="1.1"
+   id="svg6264"
+   sodipodi:docname="map-marker.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <metadata
+     id="metadata6270">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6268" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview6266"
+     showgrid="false"
+     inkscape:zoom="7.4722222"
+     inkscape:cx="32"
+     inkscape:cy="36"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6264" />
+  <path
+     d="M64 18.271V43.694C64 53.7844 55.5565 61.9651 45.1421 61.9651H43.2347L33.4941 71.3963C33.1127 71.7659 32.5849 72 32 72C31.4596 72 30.97 71.809 30.5949 71.4887L30.4296 71.3285L30.4232 71.3224L20.7653 61.9651H18.8516C8.44347 61.9651 0 53.7844 0 43.694V18.271C0 8.1807 8.44347 0 18.8579 0H45.1421C55.5565 0 64 8.1807 64 18.271Z"
+     fill="#FFD666"
+     id="path6256" />
+  <path
+     d="M14.2697 35.219C12.4132 35.219 11.355 37.2687 12.4322 38.7487C16.6205 44.5139 23.5462 48.2728 31.3717 48.2728C39.1972 48.2728 46.1166 44.5077 50.3049 38.7487C51.3821 37.2687 50.324 35.219 48.4674 35.219H14.2697Z"
+     fill="white"
+     id="path6258"
+     style="fill:#f9fafb;fill-opacity:1" />
+  <path
+     d="M25.1432 26.4937H13.9405V21.0196C13.9405 17.9976 16.4497 15.5454 19.5419 15.5454C22.634 15.5454 25.1432 17.9976 25.1432 21.0196V26.4937Z"
+     fill="white"
+     id="path6260"
+     style="fill:#f9fafb;fill-opacity:1" />
+  <path
+     d="M48.803 26.4937H37.6002V21.0196C37.6002 17.9976 40.1094 15.5454 43.2016 15.5454C46.2938 15.5454 48.803 17.9976 48.803 21.0196V26.4937Z"
+     fill="white"
+     id="path6262"
+     style="fill:#f9fafb;fill-opacity:1" />
+</svg>
