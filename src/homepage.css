@@ -44,15 +44,67 @@ textarea {
 }
 .map {
   grid-area: map;
-  border: brown solid;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.map .box-arrow {
+  width: inherit;
+  height: 90%;
+  border-radius: 5%;
+
+  background-color: #0d4e6b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 3vw;
+}
+.map .box-arrow:hover {
+  color: #0d4e6b;
+  border: #0d4e6b solid;
+  background-color: #f9fafb;
 }
 .restrict {
   grid-area: restrict;
-  border: lawngreen solid;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
+.restrict .box-key {
+  color: #f9fafb;
+  width: inherit;
+  height: 90%;
+  border-radius: 5%;
+
+  background-color: #0d4e6b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5vw;
+
+  transition: background-color 0.3s;
+}
+.restrict .box-key .key {
+  margin-left: 1vw;
+}
+.restrict .box-key:hover {
+  color: #0d4e6b;
+  border: #0d4e6b solid;
+  background-color: #f9fafb;
+}
+
 .logo {
   grid-area: logo;
-  border: yellow solid;
   background: url("./images/logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -60,7 +112,6 @@ textarea {
 }
 .city {
   grid-area: city;
-  border: blueviolet solid;
   width: 100%;
   height: 100%;
   padding-left: 1rem;
@@ -74,7 +125,6 @@ textarea {
 }
 .img {
   grid-area: img;
-  border: teal solid;
   background: url("./images/landing.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -82,14 +132,12 @@ textarea {
 }
 .title {
   grid-area: title;
-  border: lime solid;
   width: 100%;
   height: 100%;
   font-size: 2.25vw;
 }
 .description {
   grid-area: description;
-  border: darkolivegreen solid;
   width: 100%;
   height: 100%;
 
