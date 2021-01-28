@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background: #ebf2f5;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 10px Noto Sans, sans-serif;
+}
+
+#homepage {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem;
+  color: #0d4e6b;
+  background: #f9fafb;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
+  gap: 0% 0%;
+  grid-template-areas:
+    "logo logo city city city city . . restrict restrict"
+    ". . . . img img img img img ."
+    ". . . . img img img img img ."
+    "title title title title img img img img img ."
+    "title title title title img img img img img ."
+    "title title title title img img img img img ."
+    "title title title title img img img img img ."
+    "title title title title img img img img img ."
+    ". . . . img img img img img ."
+    "description description description description . . . . . map";
+}
+.map {
+  grid-area: map;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.map .box-arrow {
+  width: inherit;
+  height: 90%;
+  border-radius: 5%;
+
+  background-color: #0d4e6b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 3vw;
+}
+.map .box-arrow:hover {
+  color: #0d4e6b;
+  border: #0d4e6b solid;
+  background-color: #f9fafb;
+}
+.restrict {
+  grid-area: restrict;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.restrict .box-key {
+  color: #f9fafb;
+  width: inherit;
+  height: 90%;
+  border-radius: 5%;
+
+  background-color: #0d4e6b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5vw;
+
+  transition: background-color 0.3s;
+}
+.restrict .box-key .key {
+  margin-left: 1vw;
+}
+.restrict .box-key:hover {
+  color: #0d4e6b;
+  border: #0d4e6b solid;
+  background-color: #f9fafb;
+}
+
+.logo {
+  grid-area: logo;
+  background: url("../../images/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+.city {
+  grid-area: city;
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+
+  display: flex;
+  align-items: initial;
+  justify-content: center;
+  flex-direction: column;
+
+  font-size: 2.25vw;
+}
+.img {
+  grid-area: img;
+  background: url("../../images/landing.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.title {
+  grid-area: title;
+  width: 100%;
+  height: 100%;
+  font-size: 2.25vw;
+}
+.description {
+  grid-area: description;
+  width: 100%;
+  height: 100%;
+
+  font-size: 2vw;
+  font-weight: 400;
+  font-style: italic;
+}
