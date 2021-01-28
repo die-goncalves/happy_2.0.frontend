@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import { FiArrowRight, FiKey } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   return (
@@ -18,9 +19,9 @@ function Homepage() {
           </div>
         </div>
         <div className="map">
-          <a href="http://localhost:3000/map" className="box-arrow">
+          <Link to="/map" className="box-arrow">
             <FiArrowRight className="arrow" color="rgba(255, 214, 102, 1.0)" />
-          </a>
+          </Link>
         </div>
         <div className="img"></div>
         <div className="description">
