@@ -1,5 +1,6 @@
 import React from "react";
 import "./homepage.css";
+import { FiArrowRight, FiKey } from "react-icons/fi";
 
 function App() {
   return (
@@ -10,8 +11,17 @@ function App() {
           <strong>Jaguaré</strong>
           <span>Espírito Santo</span>
         </div>
-        <div className="restrict">Acesso restrito</div>
-        <div className="map">mapa</div>
+        <div className="restrict">
+          <div className="box-key">
+            <span>Acesso restrito</span>
+            <FiKey className="key" color="rgba(255, 214, 102, 1.0)" />
+          </div>
+        </div>
+        <div className="map">
+          <div className="box-arrow">
+            <FiArrowRight className="arrow" color="rgba(255, 214, 102, 1.0)" />
+          </div>
+        </div>
         <div className="img"></div>
         <div className="description">
           <p>Visite orfanatos e mude o dia de muitas crianças!</p>
