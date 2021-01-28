@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background: #ebf2f5;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 10px Noto Sans, sans-serif;
+}
+
+#mp {
+  width: 100vw;
+  height: 100vh;
+  color: #0d4e6b;
+  background: #f9fafb;
+
+  position: relative;
+  display: flex;
+}
+
+#mp .mp-side {
+  width: 30%;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1vw 1vw 0.1vw;
+}
+#mp .mp-side .mp-mark {
+  width: 5vw;
+  height: 5vw;
+  background: url("../../images/map-marker.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+#mp .mp-side .mp-text {
+  padding-bottom: 10rem;
+}
+#mp .mp-side .mp-text .mp-title {
+  font-size: 2.8vw;
+  font-weight: 700;
+}
+#mp .mp-side .mp-text .mp-description {
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+#mp .mp-side .mp-city {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.55vw;
+}
+
+#mp .mp-grid-world {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0px 0px;
+}
+#mp .mp-grid-world .mp-register {
+  grid-area: 10 / 7 / 11 / 8;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mp .mp-grid-world .mp-register .mp-button {
+  background-color: #0d4e6b;
+  width: 80%;
+  height: 80%;
+  border-radius: 2vw;
+
+  font-size: 2vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mp .mp-grid-world .mp-map {
+  grid-area: 1 / 1 / 11 / 8;
+  background-color: rgb(145, 145, 145);
+  z-index: 0;
+}
