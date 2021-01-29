@@ -1,6 +1,9 @@
 import React from "react";
 import { FaRegSmileBeam, FaPlus } from "react-icons/fa";
+import { MapContainer, TileLayer } from "react-leaflet";
+
 import "./styles.css";
+import "leaflet/dist/leaflet.css";
 
 function Mappage() {
   return (
@@ -33,7 +36,14 @@ function Mappage() {
             <FaPlus color="rgba(255, 214, 102, 1.0)" />
           </div>
         </div>
-        <div className="mp-map"></div>
+        <div className="mp-map">
+          <MapContainer center={[0, 0]} zoom={13} className="leaf">
+            <TileLayer
+              url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+          </MapContainer>
+        </div>
       </div>
     </div>
   );
