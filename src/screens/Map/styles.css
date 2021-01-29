@@ -26,14 +26,15 @@ textarea {
 }
 
 #mp .mp-side {
-  width: 30%;
+  width: 25%;
   height: inherit;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 1vw 1vw 0.1vw;
+  padding: 3vw 0rem 3vw 3vw;
+  border-right: 0.25vw #0d4e6b solid;
 }
 #mp .mp-side .mp-mark {
   width: 5vw;
@@ -63,36 +64,45 @@ textarea {
 
 #mp .mp-grid-world {
   display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: repeat(7, 1fr);
+  width: 75%;
+  height: inherit;
+  grid-template-columns: 0.5fr repeat(7, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  gap: 0px 0px;
+  gap: 0% 0%;
 }
 #mp .mp-grid-world .mp-register {
-  grid-area: 10 / 7 / 11 / 8;
+  grid-area: 9 / 7 / 11 / 9;
   width: 100%;
   height: 100%;
-  z-index: 10;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  padding-right: 3vw;
+  padding-bottom: 3vw;
 }
 #mp .mp-grid-world .mp-register .mp-button {
   background-color: #0d4e6b;
-  width: 80%;
-  height: 80%;
-  border-radius: 2vw;
+  width: 5.5vw;
+  height: 5.5vw;
+  border-radius: 1.5vw;
 
   font-size: 2vw;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  z-index: 10;
 }
 #mp .mp-grid-world .mp-map {
-  grid-area: 1 / 1 / 11 / 8;
-  background-color: rgb(145, 145, 145);
-  z-index: 0;
+  grid-area: 1 / 1 / 11 / 9;
+  width: 100%;
+  height: 100%;
+}
+#mp .mp-grid-world .mp-map .leaf {
+  width: inherit;
+  height: inherit;
+  z-index: 5;
 }
