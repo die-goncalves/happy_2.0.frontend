@@ -1,0 +1,12 @@
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: none;
+}
+.leaflet-container a {
+  color: #0d4e6b;
+  transition: all 0.5s;
+}
+.leaflet-container a:hover {
+  color: #0d4e6b;
+  background-color: #bbffcfff;
+}
