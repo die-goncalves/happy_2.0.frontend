@@ -100,9 +100,15 @@ textarea {
   grid-area: 1 / 1 / 11 / 9;
   width: 100%;
   height: 100%;
+  z-index: 5;
 }
-#mp .mp-grid-world .mp-map .leaf {
+
+/*
+ * div mp-map
+ *  div worldmap
+ *    css map world-map
+ */
+#mp .mp-grid-world .mp-map .worldmap {
   width: inherit;
   height: inherit;
-  z-index: 5;
 }
