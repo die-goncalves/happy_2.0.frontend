@@ -1,0 +1,345 @@
+/* ===================================================================:: */
+/* page content */
+#content-container {
+  width: 100vw;
+  background: rgb(255, 255, 255);
+}
+/* ===================================================================:: */
+/* side-bar */
+aside.app-sidebar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 11%;
+
+  padding: 3vw 0rem 3vw 3vw;
+  background: #f9fafb;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+aside.app-sidebar img {
+  width: 5vw;
+  height: 5vw;
+}
+aside.app-sidebar footer button {
+  width: 5vw;
+  height: 5vw;
+
+  border: 0;
+
+  background: #0d4e6b;
+  border: solid #0d4e6b;
+  border-radius: 1.75vw;
+
+  cursor: pointer;
+
+  transition: background-color 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside.app-sidebar footer button:hover {
+  background: #f9fafb;
+}
+aside.app-sidebar .createpage-arrow {
+  color: rgba(255, 214, 102, 1);
+  transition: 1s;
+}
+button:hover .createpage-arrow {
+  color: #0d4e6b;
+}
+/* ===================================================================:: */
+/* form */
+#content-container .div-form {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  width: 89%;
+  min-height: 100%;
+  background: linear-gradient(#0d4e6b, white);
+  padding: 3vw 0 3vw 0;
+}
+
+#content-container .div-form .form {
+  width: 75%;
+  margin: auto;
+
+  background: white;
+  border-radius: 20px;
+
+  padding: 5vw 5vw;
+
+  overflow: hidden;
+  z-index: 4;
+}
+
+form.form fieldset legend {
+  width: 100%;
+
+  font-size: 32px;
+  line-height: 34px;
+  color: #0d4e6b;
+  font-weight: 700;
+
+  border-bottom: 1px solid #d3e2e5;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+}
+
+form.form label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #0d4e6b;
+}
+
+/* ===================================================================:: */
+/* hidden inputs
+-> https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+-> https://markheath.net/post/customize-radio-button-css
+*/
+#imagem,
+.coordenada,
+input[type="radio"] {
+  position: absolute;
+  overflow: hidden;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================================================================:: */
+/* confirm button */
+form.form button.submit-button {
+  margin-top: 64px;
+
+  width: 100%;
+  height: 64px;
+  border: 0;
+  cursor: pointer;
+  background-color: #37c77f;
+  border-radius: 20px;
+  color: #f9fafb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-style: italic;
+
+  transition: background-color 0.2s;
+}
+form.form button.submit-button:hover {
+  background-color: #3ee08f;
+}
+/* ===================================================================:: */
+/* spacing */
+fieldset {
+  border: none;
+}
+fieldset + fieldset {
+  margin-top: 5vw;
+}
+.input-data + .input-data,
+.map-do + .input-data,
+.input-visitation + .input-visitation {
+  margin-top: 2vw;
+}
+label + input,
+label + label,
+label + textarea,
+label + .button-select {
+  margin-top: 0.65vw;
+}
+input,
+textarea {
+  padding: 26px 18px;
+}
+
+/* ===================================================================:: */
+/* MAP */
+form.form .map-do {
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form.form .map {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 0 0;
+
+  border: none;
+}
+form.form .do {
+  width: 100%;
+  height: 30px;
+  border-radius: 0 0 20px 20px;
+  color: #0089a5;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border: none;
+
+  padding: 20px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===================================================================:: */
+/* Input name */
+/* Input opening_hours */
+.main-name,
+.main-opening_hours {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 64px;
+  border-radius: 20px;
+
+  font-size: 16px;
+  border: none;
+}
+/* ===================================================================:: */
+/* Textarea about */
+/* Textarea instructions */
+.main-about,
+.main-instructions {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  border-radius: 20px;
+
+  font-size: 16px;
+
+  border: none;
+  resize: none;
+}
+/* ===================================================================:: */
+/* Radio Buttons */
+form.form .input-visitation .button-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.simulate-button-true,
+.simulate-button-false {
+  width: 100%;
+  height: 64px;
+
+  background: #f5f8fa;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.simulate-button-true:hover,
+.simulate-button-false:hover {
+  background-color: #00000011;
+}
+input[type="radio"]:checked + .simulate-button-true,
+input[type="radio"]:checked + .simulate-button-false {
+  background-color: #a6faae;
+  border: 1.5px solid #25d824;
+}
+.simulate-button-true {
+  border-radius: 20px 0px 0px 20px;
+}
+.simulate-button-false {
+  border-radius: 0 20px 20px 0;
+  border-left: 0;
+}
+/* ===================================================================:: */
+/* Eliminate focus */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* ===================================================================:: */
+/* Input and textarea animation for errors */
+.invalid {
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: #fffbfbef;
+}
+.valid {
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: #f5f8fa;
+}
+.valid-pictures {
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: #f5f8fa;
+  border: 1px dashed #96d2f0;
+}
+.valid-plus {
+  color: #15b6d6;
+}
+.invalid-plus {
+  color: rgba(255, 0, 0, 0.5);
+}
+/* ===================================================================:: */
+/* Customization style errors */
+.error {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.error-message {
+  color: #bf1650;
+  font-size: 10px;
+  padding-top: 0.25rem;
+  padding-left: 18px;
+}
+.error-message::before {
+  display: inline;
+  content: "❌ ";
+}
+/* ===================================================================:: */
+/* Pictures */
+form.form .input-data .pictures {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+  border-radius: 20px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container {
+  margin-top: 0.65vw;
+  margin-bottom: 0.65vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1vw;
+}
+.image-container img {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+  border-radius: 1vw;
+}
