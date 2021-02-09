@@ -1,20 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  color: #fff;
-  background: #ebf2f5;
-}
-
-body,
-input,
-button,
-textarea {
-  font: 10px Noto Sans, sans-serif;
-}
-
 #homepage {
   width: 100vw;
   height: 100vh;
