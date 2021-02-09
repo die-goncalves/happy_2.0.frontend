@@ -3,4 +3,47 @@
   height: 100vh;
 
   background-color: #37c77f;
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sp-left {
+  text-align: center;
+}
+#sp-title,
+#sp-comeback,
+#sp-description,
+#sp-pictures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sp-title p {
+  font-size: 4.85vw;
+  line-height: 5.88vw;
+  font-weight: 700;
+}
+#sp-description p {
+  font-size: 1.455vw;
+  line-height: 2.5vw;
+  margin: 2.3426vw 0 4.3924vw 0;
+}
+#sp-comeback input {
+  height: 4.686vw;
+  padding: 1.464125vw 2.92825vw;
+  border-radius: 1.2125vw;
+  background-color: #31b272;
+  color: #f9fafb;
+  border: none;
+  font-size: 1.09125vw;
+  line-height: 1.515625vw;
+  transition: background-color 0.2s;
+}
+#sp-comeback input:hover {
+  background-color: #3bd689;
+}
+#sp-pictures img {
+  width: 29.2828vw;
 }
