@@ -143,10 +143,10 @@ form.form button.submit-button:hover {
 }
 /* ===================================================================:: */
 /* spacing */
-fieldset {
+#content-container fieldset {
   border: none;
 }
-fieldset + fieldset {
+#content-container fieldset + fieldset {
   margin-top: 5vw;
 }
 .input-data + .input-data,
@@ -154,14 +154,14 @@ fieldset + fieldset {
 .input-visitation + .input-visitation {
   margin-top: 2vw;
 }
-label + input,
-label + label,
-label + textarea,
-label + .button-select {
+#content-container label + input,
+#content-container label + label,
+#content-container label + textarea,
+#content-container label + .button-select {
   margin-top: 0.65vw;
 }
-input,
-textarea {
+#content-container input,
+#content-container textarea {
   padding: 26px 18px;
 }
 

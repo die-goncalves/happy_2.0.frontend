@@ -1,7 +1,268 @@
+:root {
+  --custom-white: #f9fafb;
+  --custom-blue: #0d4e6b;
+  --custom-blue-01: #0d4d6bad;
+  --custom-label: #8fa7b3;
+}
 #login-page {
   width: 100vw;
   height: 100vh;
 
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+
+  display: flex;
+}
+.lp-left {
+  width: 60vw;
+  height: inherit;
+  background-color: var(--custom-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#lp-logotipo img {
+  width: 18.056vw;
+  margin-bottom: 6.9445vw;
+}
+#lp-city {
+  font-size: 1.71vw;
+  line-height: 2.428vw;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  color: var(--custom-blue);
+}
+.lp-right {
+  width: 40vw;
+  height: inherit;
+  border-left: 0.25vw solid var(--custom-blue);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lp-form {
+  width: auto;
+  height: auto;
+  background-color: white;
+}
+.lp-form fieldset {
+  border: none;
+}
+
+.input-email,
+.input-password {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================================================================:: */
+/* inputs */
+.input-email input,
+.input-password input {
+  height: 4.167vw;
+  border: none;
+  border-radius: 1.388vw;
+  padding: 1.666vw 1.458vw;
+  /* background-color: #f5f8fa; */
+
+  font-size: 1.111vw;
+}
+/* ===================================================================:: */
+/* legend */
+.lp-form legend {
+  text-align: start;
+  margin-bottom: 2.7778vw;
+  font-size: 2.222vw;
+  font-weight: 700;
+  line-height: 2.361vw;
+  color: var(--custom-blue);
+}
+/* ===================================================================:: */
+/* labels */
+.lp-form label {
+  font-size: 1.12vw;
+  line-height: 1.53vw;
+  margin-bottom: 0.65vw;
+  color: var(--custom-blue);
+}
+/* ===================================================================:: */
+/* space inputs */
+.input-email + .input-password {
+  margin-top: 1.111vw;
+}
+.input-password + .input-remember {
+  margin-top: 1.666vw;
+}
+/* ===================================================================:: */
+/* confirm button */
+.submit-button {
+  margin-top: 2.777vw;
+
+  width: 25vw;
+  height: 4.167vw;
+  border: 0;
+  cursor: pointer;
   background-color: #37c77f;
+  border-radius: 20px;
   color: #f9fafb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.112vw;
+  font-style: italic;
+
+  transition: background-color 0.2s;
+}
+.submit-button:hover {
+  background-color: #3ee08f;
+}
+
+/* ===================================================================:: */
+/* Remember and forgot */
+#login-page .input-remember {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#login-page .lembrar-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login-page .lembrar-me label {
+  margin-left: 1.111vw;
+  margin-bottom: 0;
+}
+#login-page .lembrar-me .use-checkbox {
+  width: 1.805vw;
+  height: 1.805vw;
+}
+#login-page .lembrar-me .i-checkbox {
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login-page .esqueci {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login-page .esqueci .input-simulate {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+#input-esqueci {
+  position: absolute;
+  overflow: hidden;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+/* ===================================================================:: */
+/* Password toogle */
+.input-password {
+  position: relative;
+}
+.input-password input {
+  padding-right: 5vw;
+}
+.div-icon-eye-valid,
+.div-icon-eye-invalid {
+  position: absolute;
+  bottom: 1.04165vw;
+  right: 1.458vw;
+}
+.teste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.0833vw;
+  height: 2.0833vw;
+}
+.use-eye {
+  width: 2.0833vw;
+  height: 2.0833vw;
+  cursor: pointer;
+}
+/* ===================================================================:: */
+/* button comeback */
+#login-page .voltar {
+  position: absolute;
+  top: 3vw;
+  right: 3vw;
+}
+#login-page .voltar .box-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.7778vw;
+  height: 2.7778vw;
+
+  border-radius: 1.111vw;
+
+  padding: 0.8333vw;
+  background-color: var(--custom-blue);
+  border: 0.15vw solid var(--custom-blue);
+
+  transition: background-color 0.5s;
+}
+
+#login-page .voltar .box-arrow:hover {
+  background: white;
+}
+
+#login-page .voltar .box-arrow .arrow {
+  width: max-content;
+  height: max-content;
+
+  color: rgba(255, 214, 102, 1);
+  transition: color 0.5s;
+}
+#login-page .voltar .box-arrow:hover .arrow {
+  color: var(--custom-blue);
+}
+/* ===================================================================:: */
+/* Input and textarea animation for errors */
+#login-page .invalid {
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: #fffbfbef;
+}
+#login-page .valid {
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: #f5f8fa;
+}
+/* ===================================================================:: */
+/* Customization style errors */
+#login-page .error {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#login-page .error-message {
+  color: #bf1650;
+  font-size: 0.903vw;
+  padding-top: 0.347vw;
+  padding-left: 1.458vw;
+}
+#login-page .error-message::before {
+  display: inline;
+  content: "❌ ";
 }
