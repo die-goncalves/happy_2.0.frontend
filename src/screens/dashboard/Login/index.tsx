@@ -45,7 +45,7 @@ function Loginpage() {
           <fieldset>
             <legend>Fazer login</legend>
             <div className="input-email">
-              <label>Email</label>
+              <label>E-mail</label>
               <input
                 className={`${errors.email ? "invalid" : "valid"}`}
                 type="text"
@@ -53,10 +53,10 @@ function Loginpage() {
                 placeholder="fulano@gmail.com"
                 autoComplete="off"
                 ref={register({
-                  required: "Campo obrigatório",
+                  required: "E-mail obrigatório",
                   pattern: {
                     value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    message: "Endereço de email inválido",
+                    message: "E-mail inválido",
                   },
                 })}
               />
@@ -75,7 +75,7 @@ function Loginpage() {
                 placeholder="123456;)"
                 autoComplete="off"
                 ref={register({
-                  required: "Campo obrigatório",
+                  required: "Senha obrigatória",
                 })}
               />
               <div className="error">
