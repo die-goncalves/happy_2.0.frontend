@@ -6,6 +6,7 @@ import Mappage from "./screens/Map";
 import Createpage from "./screens/Create";
 import Successpage from "./screens/Success";
 import Loginpage from "./screens/dashboard/Login";
+import Registeredpage from "./screens/dashboard/Registered";
 
 function Routes() {
   return (
@@ -16,6 +17,7 @@ function Routes() {
         <Route exact path="/map/create" component={Createpage} />
         <Route exact path="/map/create/success" component={Successpage} />
         <Route exact path="/dashboard/login" component={Loginpage} />
+        <Route exact path="/dashboard/registered" component={Registeredpage} />
       </Switch>
     </BrowserRouter>
   );
