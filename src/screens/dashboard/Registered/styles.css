@@ -1,0 +1,48 @@
+#registered-page {
+  width: 100vw;
+  background: rgb(255, 255, 255);
+}
+#registered-page-main {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 93.333%;
+  min-height: 100%;
+
+  background-color: var(--background);
+  padding: 4.4444% 7.7777% 4.4444% 7.7777%;
+}
+
+.registered-page-header {
+  width: 77.7776vw;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding-bottom: 1.6666vw;
+  margin-bottom: 2.7777vw;
+  border-bottom: 1px solid var(--blue);
+
+  color: var(--blue);
+}
+.registered-page-header p {
+  font-size: 2.2222vw;
+  font-weight: 700;
+  line-height: 2.3611vw;
+}
+.registered-page-header span {
+  font-size: 1.1111vw;
+  line-height: 1.5152vw;
+}
+.registered-page-cluster {
+  width: 77.7776vw;
+  background-color: var(--background);
+}
+.registered-page-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.222vw 2.222vw;
+}
