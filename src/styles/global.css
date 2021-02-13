@@ -1,3 +1,10 @@
+:root {
+  --yellow: #ffd666;
+  --yellow-weak: #ffe49c;
+  --blue: #3b539c;
+  --blue-weak: #5971ba;
+  --background: #fbfcfc;
+}
 * {
   margin: 0;
   padding: 0;
