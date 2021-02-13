@@ -7,6 +7,7 @@ import Createpage from "./screens/Create";
 import Successpage from "./screens/Success";
 import Loginpage from "./screens/dashboard/Login";
 import Registeredpage from "./screens/dashboard/Registered";
+import Pendingpage from "./screens/dashboard/Pending";
 
 function Routes() {
   return (
@@ -18,6 +19,7 @@ function Routes() {
         <Route exact path="/map/create/success" component={Successpage} />
         <Route exact path="/dashboard/login" component={Loginpage} />
         <Route exact path="/dashboard/registered" component={Registeredpage} />
+        <Route exact path="/dashboard/pending" component={Pendingpage} />
       </Switch>
     </BrowserRouter>
   );
