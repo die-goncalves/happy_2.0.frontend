@@ -1,0 +1,85 @@
+/* ===================================================================:: */
+/* MAP */
+#orfanato-card {
+  background-color: var(--blue);
+  border-radius: 1.3888vw;
+  width: 37.7777vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.orfanato-card-map {
+  width: 37.7777vw;
+  height: 27.7234vh;
+  border-radius: 1.3888vw;
+  border: none;
+}
+.orfanato-card-options {
+  width: inherit;
+  height: 5.6944vw;
+
+  background-color: var(--blue);
+  border-radius: 0 0 1.3888vw 1.3888vw;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orfanato-card-options p {
+  font-size: 1.6666vw;
+  font-weight: 700;
+
+  color: var(--background);
+}
+.orfanato-card-name {
+  margin-left: 2.2222vw;
+  white-space: nowrap;
+  width: 23.8888vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+/* ===================================================================:: */
+/* scroll */
+.orfanato-card-name::-webkit-scrollbar {
+  height: 0.3472vw;
+}
+.orfanato-card-name::-webkit-scrollbar-track {
+  background: var(--blue-weak);
+}
+.orfanato-card-name::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+/* ===================================================================:: */
+/* buttons */
+.orfanato-card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orfanato-card-edit-link,
+.orfanato-card-delete-link {
+  width: 3.3333vw;
+  height: 3.3333vw;
+  border-radius: 1.1111vw;
+
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orfanato-card-edit-icon,
+.orfanato-card-delete-icon {
+  width: 1.666vw;
+  height: 1.666vw;
+  color: var(--blue);
+}
+.orfanato-card-delete-link {
+  margin-left: 0.5555vw;
+  margin-right: 2.2222vw;
+}
+.orfanato-card-edit-link {
+  margin-left: 2.2222vw;
+}
