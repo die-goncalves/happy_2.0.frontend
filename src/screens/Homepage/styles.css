@@ -6,7 +6,7 @@
   background: #f9fafb;
 }
 
-.grid-container {
+#homepage .grid-container {
   display: grid;
   width: 100%;
   height: 100%;
@@ -25,7 +25,7 @@
     ". . . . img img img img img ."
     "description description description description . . . . . map";
 }
-.map {
+#homepage .map {
   grid-area: map;
   width: 100%;
   height: 100%;
@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: flex-end;
 }
-.map .box-arrow {
+#homepage .map .box-arrow {
   width: inherit;
   height: 90%;
   border-radius: 5%;
@@ -47,12 +47,12 @@
 
   font-size: 3vw;
 }
-.map .box-arrow:hover {
+#homepage .map .box-arrow:hover {
   color: #0d4e6b;
   border: #0d4e6b solid;
   background-color: #f9fafb;
 }
-.restrict {
+#homepage .restrict {
   grid-area: restrict;
   width: 100%;
   height: 100%;
@@ -61,7 +61,7 @@
   align-items: center;
   justify-content: flex-end;
 }
-.restrict .box-key {
+#homepage .restrict .box-key {
   color: #f9fafb;
   width: inherit;
   height: 90%;
@@ -77,23 +77,23 @@
 
   transition: background-color 0.3s;
 }
-.restrict .box-key .key {
+#homepage .restrict .box-key .key {
   margin-left: 1vw;
 }
-.restrict .box-key:hover {
+#homepage .restrict .box-key:hover {
   color: #0d4e6b;
   border: #0d4e6b solid;
   background-color: #f9fafb;
 }
 
-.logo {
+#homepage .logo {
   grid-area: logo;
   background: url("../../images/logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
 }
-.city {
+#homepage .city {
   grid-area: city;
   width: 100%;
   height: 100%;
@@ -106,20 +106,20 @@
 
   font-size: 2.25vw;
 }
-.img {
+#homepage .img {
   grid-area: img;
   background: url("../../images/landing.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-.title {
+#homepage .title {
   grid-area: title;
   width: 100%;
   height: 100%;
   font-size: 2.25vw;
 }
-.description {
+#homepage .description {
   grid-area: description;
   width: 100%;
   height: 100%;
