@@ -22,13 +22,13 @@ export default function MyLocation({ mylocation }: LocationParams) {
       container.style.width = "30px";
       container.style.height = "30px";
       container.style.backgroundImage = `url(${userMarker}`;
-      container.style.backgroundSize = "65% 65%";
+      container.style.backgroundSize = "55% 55%";
       container.style.backgroundRepeat = "no-repeat";
       container.style.backgroundPosition = "center center";
       container.style.cursor = "pointer";
       container.style.touchAction = "none";
       container.onmouseenter = function () {
-        container.style.backgroundColor = "#bbffcfff";
+        container.style.backgroundColor = "#ebebeb";
       };
       container.onmouseleave = function () {
         container.style.backgroundColor = "white";
