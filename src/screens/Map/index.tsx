@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegSmileBeam, FaPlus } from "react-icons/fa";
 
 import "./styles.css";
-import "leaflet/dist/leaflet.css";
-import WorldMap from "../../components/Map/WorldMap";
+import WorldMap, { Orphanages } from "../../components/Map/WorldMap";
+import api from "../../services/api";
+import { Link } from "react-router-dom";
 
 function Mappage() {
+  const [orphanages, setOrphanages] = useState<Orphanages[]>([]);
+
+  useEffect(() => {
+    api.get("hosting").then((response) => {
+      setOrphanages(response.data);
+    });
+  }, []);
+
   return (
     <div id="mp">
       <div className="mp-side">
@@ -32,12 +41,12 @@ function Mappage() {
       </div>
       <div className="mp-grid-world">
         <div className="mp-register">
-          <div className="mp-button">
-            <FaPlus color="rgba(255, 214, 102, 1.0)" />
-          </div>
+          <Link to={`/map/create`} className="mp-button">
+            <FaPlus className="map-page-icon" />
+          </Link>
         </div>
         <div className="mp-map">
-          <WorldMap />
+          <WorldMap orphanages={orphanages} />
         </div>
       </div>
     </div>

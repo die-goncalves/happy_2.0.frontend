@@ -1,15 +1,14 @@
 #mp {
   width: 100vw;
   height: 100vh;
-  color: #0d4e6b;
-  background: #f9fafb;
-
+  color: var(--blue);
+  background: var(--background);
   position: relative;
   display: flex;
 }
 
 #mp .mp-side {
-  width: 25%;
+  width: 27.7777%;
   height: inherit;
 
   display: flex;
@@ -17,10 +16,10 @@
   justify-content: space-between;
 
   padding: 3vw 0rem 3vw 3vw;
-  border-right: 0.25vw #0d4e6b solid;
+  border-right: 0.25vw var(--blue) solid;
 }
 #mp .mp-side .mp-mark {
-  width: 5vw;
+  width: 4.4444vw;
   height: 5vw;
   background: url("../../images/map-marker.svg");
   background-repeat: no-repeat;
@@ -28,28 +27,28 @@
   background-position: left center;
 }
 #mp .mp-side .mp-text {
-  padding-bottom: 10rem;
+  padding-bottom: 10vw;
 }
 #mp .mp-side .mp-text .mp-title {
-  font-size: 2.8vw;
+  font-size: 2.7777vw;
   font-weight: 700;
 }
 #mp .mp-side .mp-text .mp-description {
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   font-weight: 400;
 }
 #mp .mp-side .mp-city {
   display: flex;
   flex-direction: column;
 
-  font-size: 1.55vw;
+  font-size: 1.25vw;
 }
 
 #mp .mp-grid-world {
   display: grid;
-  width: 75%;
+  width: 72.2223%;
   height: inherit;
-  grid-template-columns: 0.5fr repeat(7, 1fr);
+  grid-template-columns: 0.22223fr repeat(7, 1fr);
   grid-template-rows: repeat(10, 1fr);
   gap: 0% 0%;
 }
@@ -66,18 +65,29 @@
   padding-bottom: 3vw;
 }
 #mp .mp-grid-world .mp-register .mp-button {
-  background-color: #0d4e6b;
-  width: 5.5vw;
-  height: 5.5vw;
-  border-radius: 1.5vw;
-
-  font-size: 2vw;
+  background-color: var(--yellow);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   z-index: 10;
+  transition: background-color 0.2s;
+}
+#mp .mp-grid-world .mp-register .mp-button:hover {
+  background-color: var(--yellow-weak);
+}
+.map-page-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--blue);
+  transition: color 0.2s;
+}
+#mp .mp-grid-world .mp-register .mp-button:hover .map-page-icon {
+  color: var(--blue-weak);
 }
 #mp .mp-grid-world .mp-map {
   grid-area: 1 / 1 / 11 / 9;
