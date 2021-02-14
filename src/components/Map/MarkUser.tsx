@@ -25,10 +25,13 @@ export default function MarkUser({ mylocation }: LocationParams) {
   ];
   return (
     <Marker position={latlng} icon={mapIcon}>
-      <Popup>
-        <h1>You are here.</h1>
+      <Popup closeButton={false} className="mark-user-popup">
+        <h1>Você</h1>
+        <span>Posição central:</span>
         <p>
-          lat:{latlng[0]} - lng:{latlng[1]}
+          Latitude: {latlng[0]}
+          <br />
+          Longitude: {latlng[1]}
         </p>
       </Popup>
       <Circle
