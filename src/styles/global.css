@@ -1,13 +1,29 @@
 :root {
   --yellow: #ffd666;
   --yellow-weak: #ffe49c;
-  --blue: #3b539c;
-  --blue-weak: #5971ba;
+  --blue: #0d4e6b;
+  --blue-weak: #3489af;
   --background: #fbfcfc;
+  --background-popup: #fbfcfceb;
+  --button-leaflet: #ebebeb;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Noto Sans, sans-serif;
+}
+/* ===================================================================:: */
+/* buttons map */
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: none;
+}
+.leaflet-container a {
+  color: var(--blue);
+  transition: all 0.5s;
+}
+.leaflet-container a:hover {
+  color: var(--blue);
+  background-color: var(--button-leaflet);
 }
