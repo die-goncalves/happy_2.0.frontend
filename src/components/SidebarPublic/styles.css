@@ -1,0 +1,41 @@
+#sidebar-public {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  width: 6.6666%;
+  height: 100vh;
+  background-color: var(--background);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2.2222vw 1.6666vw 2.2222vw 1.6666vw;
+}
+.sidebar-public-logo img {
+  width: 3.3333vw;
+}
+.sidebar-public-goback {
+  width: 3.3333vw;
+  height: 3.3333vw;
+  border-radius: 1.1111vw;
+
+  background-color: var(--blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.2s;
+}
+.sidebar-public-goback:hover {
+  background-color: var(--blue-weak);
+}
+.sidebar-public-goback-arrow {
+  width: 1.6666vw;
+  height: 1.6666vw;
+
+  color: var(--background);
+}
