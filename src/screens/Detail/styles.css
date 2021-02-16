@@ -1,0 +1,196 @@
+#detail-page {
+  width: 100vw;
+  background-color: var(--background);
+  color: var(--blue);
+}
+.detail-page-rightside {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  width: 93.3333%;
+  min-height: 100%;
+
+  background: linear-gradient(var(--blue), white);
+  padding: 2.2222vw 0 2.2222vw 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail-page-orphanage {
+  width: 62.5vw;
+  border-radius: 1.6851vw;
+  background-color: var(--background);
+}
+.detail-page-picture-focus {
+  width: 100%;
+  height: 29.6333vw;
+
+  margin-bottom: 5.6444vw;
+  border-radius: 1.7638vw 1.7638vw 0 0;
+}
+.detail-page-below-picture {
+  padding-left: 7.0555vw;
+  padding-right: 7.0555vw;
+}
+.detail-page-nome-descricao {
+  margin-bottom: 5.6444vw;
+}
+.detail-page-nome-descricao h1 {
+  font-size: 4.7625vw;
+  margin-bottom: 2.8222vw;
+}
+.detail-page-nome-descricao p {
+  font-size: 1.5875vw;
+}
+/* ===================================================================:: */
+/* pictures area */
+.detail-page-pictures {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.detail-page-pass-pictures-right,
+.detail-page-pass-pictures-left {
+  position: absolute;
+  top: 8vw;
+  right: 0;
+  width: 3vw;
+  height: 4vw;
+  border: none;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+.detail-page-pass-pictures-left {
+  left: 0;
+}
+.detail-page-pass-pictures-arrow {
+  width: 100%;
+  height: 100%;
+  color: var(--background);
+}
+/* ===================================================================:: */
+/*
+  scroll grid based here:
+    https://inthedigital.co.uk/how-to-create-a-horizontally-scrolling-section-with-2-rows-using-css-grid/
+*/
+#detail-page-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  gap: 0% 1.42vw;
+
+  margin-bottom: 6.8791vw;
+  overflow: hidden;
+}
+#detail-page-grid button {
+  border: none;
+  width: 15.187vw;
+  height: 20vw;
+  background: none;
+  cursor: pointer;
+  border-radius: 1vw;
+  overflow: hidden;
+  outline: none;
+  opacity: 0.6;
+  background-color: black;
+}
+#detail-page-grid button.active {
+  opacity: 1;
+}
+#detail-page-grid button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ===================================================================:: */
+/* map */
+.detail-page-map-container {
+  width: 100%;
+  height: 35.2777vw;
+
+  margin-bottom: 5.6444vw;
+  background-color: lavenderblush;
+}
+.detail-page-map {
+  width: 100%;
+  height: 29.6333vw;
+
+  border-radius: 1.7638vw 1.7638vw 0 0;
+}
+.detail-page-footer-map {
+  width: 100%;
+  height: 5.6444vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0 0 1.7638vw 1.7638vw;
+  background-color: var(--blue);
+
+  font-size: 1.5875vw;
+}
+.detail-page-footer-map a {
+  color: var(--background);
+  text-decoration: none;
+}
+/* ===================================================================:: */
+/* instructions */
+.detail-page-intructions {
+  width: 100%;
+  padding-top: 5.6444vw;
+  border-top: 1px var(--blue) solid;
+}
+.detail-page-intructions h2 {
+  font-size: 3.175vw;
+}
+.detail-page-intructions p {
+  font-size: 1.5875vw;
+  margin-top: 2.1166vw;
+}
+/* ===================================================================:: */
+/* time and open on weekends */
+.detail-page-time-visit {
+  margin-top: 2.1166vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 7.0555vw;
+}
+.detail-page-box {
+  width: 45%;
+  height: 15.2222vw;
+  border-radius: 1.7638vw;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.5875vw;
+  padding: 2.8222vw 2.1166vw 2.8222vw 2.1166vw;
+}
+.detail-page-time,
+.detail-page-open-on-weekends {
+  background: linear-gradient(154.16deg, #edfff6 7.85%, #ffffff 91.03%);
+  border: 1px solid #a1e9c5;
+}
+.detail-page-time-icon,
+.detail-page-on-weekends-icon,
+.detail-page-off-weekends-icon {
+  width: 2.8222vw;
+  height: 2.8222vw;
+  margin-bottom: 1.4111vw;
+}
+.detail-page-open-on-weekends-off {
+  background: linear-gradient(154.16deg, #fdf0f5 7.85%, #ffffff 91.03%);
+  border: 1px solid #ffbcd4;
+}
