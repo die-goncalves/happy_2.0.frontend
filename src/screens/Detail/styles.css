@@ -95,7 +95,7 @@
   gap: 0% 1.42vw;
 
   margin-bottom: 6.8791vw;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 #detail-page-grid button {
   border: none;
@@ -117,6 +117,19 @@
   height: 100%;
   object-fit: cover;
 }
+/* ===================================================================:: */
+/* scroll */
+/* Chrome, Safari, Opera */
+#detail-page-grid::-webkit-scrollbar {
+  display: none;
+}
+#detail-page-grid {
+  /* IE, Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+
 /* ===================================================================:: */
 /* map */
 .detail-page-map-container,
