@@ -73,7 +73,40 @@ function Detailpage() {
   }, [params._id]);
 
   if (!orphanage) {
-    return <p>Carregando...</p>;
+    return (
+      <div id="detail-page">
+        <SidebarPublic />
+
+        <div className="skeleton-right-side">
+          <div className="skeleton-content">
+            <div className="skeleton-picture animate"></div>
+            <div className="skeleton-below-picture">
+              <div className="skeleton-nome-descricao">
+                <h1 className="animate "></h1>
+                <p className="skeleton-descricao-a animate "></p>
+                <p className="skeleton-descricao-b animate "></p>
+              </div>
+              <div className="skeleton-list-pictures">
+                <div className="skeleton-list-pictures-a animate"></div>
+                <div className="skeleton-list-pictures-b animate"></div>
+                <div className="skeleton-list-pictures-c animate"></div>
+              </div>
+              <div className="skeleton-map animate"></div>
+              <hr className="skeleton-division" />
+              <div className="skeleton-instructions">
+                <h2 className="animate"></h2>
+                <p className="skeleton-instructions-a animate"></p>
+                <p className="skeleton-instructions-b animate"></p>
+              </div>
+              <div className="skeleton-buttons">
+                <div className="skeleton-button-time animate"></div>
+                <div className="skeleton-button-open-weekends animate"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

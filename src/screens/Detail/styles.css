@@ -3,7 +3,8 @@
   background-color: var(--background);
   color: var(--blue);
 }
-.detail-page-rightside {
+.detail-page-rightside,
+.skeleton-right-side {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -11,33 +12,38 @@
   width: 93.3333%;
   min-height: 100%;
 
-  background: linear-gradient(var(--blue), white);
+  background: linear-gradient(var(--blue), var(--background));
   padding: 2.2222vw 0 2.2222vw 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.detail-page-orphanage {
+.detail-page-orphanage,
+.skeleton-content {
   width: 62.5vw;
   border-radius: 1.6851vw;
   background-color: var(--background);
 }
-.detail-page-picture-focus {
+.detail-page-picture-focus,
+.skeleton-picture {
   width: 100%;
   height: 29.6333vw;
 
   margin-bottom: 5.6444vw;
   border-radius: 1.7638vw 1.7638vw 0 0;
 }
-.detail-page-below-picture {
+.detail-page-below-picture,
+.skeleton-below-picture {
   padding-left: 7.0555vw;
   padding-right: 7.0555vw;
 }
-.detail-page-nome-descricao {
+.detail-page-nome-descricao,
+.skeleton-nome-descricao {
   margin-bottom: 5.6444vw;
 }
-.detail-page-nome-descricao h1 {
+.detail-page-nome-descricao h1,
+.skeleton-nome-descricao h1 {
   font-size: 4.7625vw;
   margin-bottom: 2.8222vw;
 }
@@ -113,12 +119,13 @@
 }
 /* ===================================================================:: */
 /* map */
-.detail-page-map-container {
+.detail-page-map-container,
+.skeleton-map {
   width: 100%;
   height: 35.2777vw;
 
   margin-bottom: 5.6444vw;
-  background-color: lavenderblush;
+  background-color: var(--background);
 }
 .detail-page-map {
   width: 100%;
@@ -159,7 +166,8 @@
 }
 /* ===================================================================:: */
 /* time and open on weekends */
-.detail-page-time-visit {
+.detail-page-time-visit,
+.skeleton-buttons {
   margin-top: 2.1166vw;
   display: flex;
   align-items: center;
@@ -167,7 +175,9 @@
 
   margin-bottom: 7.0555vw;
 }
-.detail-page-box {
+.detail-page-box,
+.skeleton-button-time,
+.skeleton-button-open-weekends {
   width: 45%;
   height: 15.2222vw;
   border-radius: 1.7638vw;
@@ -193,4 +203,117 @@
 .detail-page-open-on-weekends-off {
   background: linear-gradient(154.16deg, #fdf0f5 7.85%, #ffffff 91.03%);
   border: 1px solid #ffbcd4;
+}
+
+/* ===================================================================:: */
+/* SKELETON */
+.skeleton-picture,
+.skeleton-nome-descricao h1,
+.skeleton-descricao-a,
+.skeleton-descricao-b,
+.skeleton-list-pictures-a,
+.skeleton-list-pictures-b,
+.skeleton-list-pictures-c,
+.skeleton-map,
+.skeleton-division,
+.skeleton-instructions h2,
+.skeleton-instructions-a,
+.skeleton-instructions-b,
+.skeleton-button-time,
+.skeleton-button-open-weekends {
+  background-color: var(--skeleton);
+}
+.skeleton-nome-descricao h1 {
+  width: 70%;
+  height: 4.7625vw;
+}
+.skeleton-descricao-a,
+.skeleton-descricao-b {
+  width: 100%;
+  height: 2.1166vw;
+}
+.skeleton-descricao-b {
+  margin-top: 1vw;
+  width: 30%;
+}
+.skeleton-list-pictures {
+  display: flex;
+  margin-bottom: 6.8791vw;
+}
+.skeleton-list-pictures-b,
+.skeleton-list-pictures-c {
+  margin-left: 1.42vw;
+}
+.skeleton-map {
+  border-radius: 1.7638vw;
+}
+.skeleton-division {
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin-bottom: 5.6444vw;
+}
+.skeleton-instructions h2 {
+  width: 60%;
+  height: 4.0569vw;
+}
+.skeleton-instructions-a,
+.skeleton-instructions-b {
+  margin-top: 2.8222vw;
+  width: 100%;
+  height: 2.1166vw;
+}
+.skeleton-instructions-b {
+  margin-top: 1vw;
+  width: 50%;
+}
+.skeleton-list-pictures-a,
+.skeleton-list-pictures-b,
+.skeleton-list-pictures-c {
+  width: 15.187vw;
+  height: 20vw;
+  border-radius: 1vw;
+}
+/* ===================================================================:: */
+/* 
+  SHIMMER based here:
+    https://dev.to/dhilipkmr/the-loading-shimmer-29dc
+*/
+.animate {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #ebebeb3b 0%,
+    #ebebeb80 50%,
+    #ebebeb 100%
+  );
+  background-size: 62.5vw;
+}
+.skeleton-map,
+.skeleton-list-pictures-a,
+.skeleton-descricao-a,
+.skeleton-descricao-b,
+.skeleton-nome-descricao h1,
+.skeleton-instructions h2,
+.skeleton-instructions-a,
+.skeleton-instructions-b,
+.skeleton-button-time {
+  animation-delay: 0.115s;
+}
+.skeleton-list-pictures-b {
+  animation-delay: 0.38s;
+}
+.skeleton-list-pictures-c {
+  animation-delay: 0.64s;
+}
+.skeleton-button-open-weekends {
+  animation-delay: 1.54s;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -62.5vw 0;
+  }
+  100% {
+    background-position: 62.5vw 0;
+  }
 }

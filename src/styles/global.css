@@ -6,6 +6,7 @@
   --background: #fbfcfc;
   --background-popup: #fbfcfceb;
   --button-leaflet: #ebebeb;
+  --skeleton: #f4f4f4;
 }
 * {
   margin: 0;
