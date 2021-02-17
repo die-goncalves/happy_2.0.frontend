@@ -1,12 +1,12 @@
-#homepage {
+#home-page {
   width: 100vw;
   height: 100vh;
-  padding: 1.5rem;
-  color: #0d4e6b;
-  background: #f9fafb;
+  padding: 2.2222vw 1.6666vw 2.2222vw 1.6666vw;
+  color: var(--blue);
+  background: var(--background);
 }
 
-#homepage .grid-container {
+#home-page .grid-container {
   display: grid;
   width: 100%;
   height: 100%;
@@ -25,34 +25,39 @@
     ". . . . img img img img img ."
     "description description description description . . . . . map";
 }
-#homepage .map {
+#home-page .map {
   grid-area: map;
   width: 100%;
   height: 100%;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
 }
-#homepage .map .box-arrow {
-  width: inherit;
-  height: 90%;
-  border-radius: 5%;
+#home-page .map .home-page-box-arrow {
+  width: 5vw;
+  height: 5vw;
 
-  background-color: #0d4e6b;
+  border-radius: 1.3888vw;
+  border: none;
+
+  background-color: var(--blue);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 3vw;
+  transition: background-color 0.2s;
 }
-#homepage .map .box-arrow:hover {
-  color: #0d4e6b;
-  border: #0d4e6b solid;
-  background-color: #f9fafb;
+#home-page .map .home-page-box-arrow:hover {
+  background-color: var(--blue-weak);
 }
-#homepage .restrict {
+#home-page .map .home-page-arrow {
+  width: 50%;
+  height: 50%;
+  color: var(--background);
+}
+#home-page .restrict {
   grid-area: restrict;
   width: 100%;
   height: 100%;
@@ -61,70 +66,78 @@
   align-items: center;
   justify-content: flex-end;
 }
-#homepage .restrict .box-key {
-  color: #f9fafb;
-  width: inherit;
-  height: 90%;
-  border-radius: 5%;
+#home-page .restrict .home-page-box-key {
+  color: var(--background);
+  /* width: inherit;
+  height: 90%; */
+  width: 20vw;
+  height: 5vw;
+  border-radius: 1.3888vw;
 
-  background-color: #0d4e6b;
+  background-color: var(--blue);
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 1.5vw 0 1.5vw;
+  text-decoration: none;
 
+  transition: background-color 0.2s;
+}
+#home-page .restrict .home-page-box-key span {
   font-size: 1.5vw;
-
-  transition: background-color 0.3s;
 }
-#homepage .restrict .box-key .key {
-  margin-left: 1vw;
+#home-page .restrict .home-page-key {
+  width: 2vw;
+  height: 2vw;
 }
-#homepage .restrict .box-key:hover {
-  color: #0d4e6b;
-  border: #0d4e6b solid;
-  background-color: #f9fafb;
+#home-page .restrict .home-page-box-key:hover {
+  background-color: var(--blue-weak);
 }
 
-#homepage .logo {
+#home-page .logo {
   grid-area: logo;
   background: url("../../images/logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
 }
-#homepage .city {
+#home-page .city {
   grid-area: city;
   width: 100%;
   height: 100%;
-  padding-left: 1rem;
+  padding-left: 1vw;
 
   display: flex;
   align-items: initial;
   justify-content: center;
   flex-direction: column;
 
-  font-size: 2.25vw;
+  font-size: 1.7638vw;
+  line-height: 2.6458vw;
 }
-#homepage .img {
+#home-page .img {
   grid-area: img;
   background: url("../../images/landing.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-#homepage .title {
+#home-page .title {
   grid-area: title;
   width: 100%;
   height: 100%;
   font-size: 2.25vw;
+  line-height: 5vw;
 }
-#homepage .description {
+#home-page .description {
   grid-area: description;
   width: 100%;
   height: 100%;
-
-  font-size: 2vw;
+}
+.description p {
+  font-size: 2.1166vw;
+  line-height: 2.9986vw;
   font-weight: 400;
   font-style: italic;
 }

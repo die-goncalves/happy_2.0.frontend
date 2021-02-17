@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Homepage() {
   return (
-    <div id="homepage">
+    <div id="home-page">
       <div className="grid-container">
         <div className="logo"></div>
         <div className="city">
@@ -13,14 +13,14 @@ function Homepage() {
           <span>Espírito Santo</span>
         </div>
         <div className="restrict">
-          <div className="box-key">
+          <Link to="/dashboard/login" className="home-page-box-key">
             <span>Acesso restrito</span>
-            <FiKey className="key" color="rgba(255, 214, 102, 1.0)" />
-          </div>
+            <FiKey className="home-page-key" color="rgba(255, 214, 102, 1.0)" />
+          </Link>
         </div>
         <div className="map">
-          <Link to="/map" className="box-arrow">
-            <FiArrowRight className="arrow" color="rgba(255, 214, 102, 1.0)" />
+          <Link to="/map" className="home-page-box-arrow">
+            <FiArrowRight className="home-page-arrow" />
           </Link>
         </div>
         <div className="img"></div>
