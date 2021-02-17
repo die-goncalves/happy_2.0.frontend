@@ -2,12 +2,14 @@ import React, { ChangeEvent, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
 import L from "leaflet";
-import { FiArrowLeft, FiPlus } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
 import { useForm } from "react-hook-form";
 import mapMarker from "../../images/map-marker.svg";
+import api from "../../services/api";
 
 import "./styles.css";
 import "leaflet/dist/leaflet.css";
+import SidebarPublic from "../../components/SidebarPublic";
 
 const mapIcon = L.icon({
   iconUrl: mapMarker,
@@ -33,7 +35,7 @@ interface latitudelongitude {
 }
 
 function Createpage() {
-  const { goBack } = useHistory();
+  const history = useHistory();
   const [latlng, setLatLng] = useState<latitudelongitude | null>(null);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
@@ -45,21 +47,22 @@ function Createpage() {
     errors,
   } = useForm<UserData>();
 
-  const onSubmit = (data: UserData) => {
-    console.log(data);
-    // const multipartForm = new FormData();
-    // multipartForm.append("name", data.name);
-    // multipartForm.append("about", data.about);
-    // multipartForm.append("latitude", String(data.latitude));
-    // multipartForm.append("longitude", String(data.longitude));
-    // multipartForm.append("instructions", data.instructions);
-    // multipartForm.append("opening_hours", data.opening_hours);
-    // multipartForm.append("open_on_weekends", String(data.open_on_weekends));
-    // data.pictures.forEach((image) => {
-    //   multipartForm.append("pictures", image);
-    // });
-    // // await api.post("/hosting/create", multipartForm);
-    // alert("Cadastro realizado com sucesso!");
+  const onSubmit = async (data: UserData) => {
+    // console.log(data);
+    const multipartForm = new FormData();
+    multipartForm.append("name", data.name);
+    multipartForm.append("about", data.about);
+    multipartForm.append("latitude", String(data.latitude));
+    multipartForm.append("longitude", String(data.longitude));
+    multipartForm.append("instructions", data.instructions);
+    multipartForm.append("opening_hours", data.opening_hours);
+    multipartForm.append("open_on_weekends", String(data.open_on_weekends));
+    for (const image of data.pictures) {
+      multipartForm.append("pictures", image);
+    }
+
+    await api.post("/hosting/create", multipartForm);
+    history.push("/map/create/success");
   };
 
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
@@ -91,27 +94,18 @@ function Createpage() {
 
   // console.log(watch("pictures"));
   return (
-    <section id="content-container">
-      <aside className="app-sidebar">
-        <img src={mapMarker} alt="Happy" />
+    <div id="create-page">
+      <SidebarPublic />
 
-        <footer>
-          <button type="button" onClick={goBack}>
-            <FiArrowLeft className="createpage-arrow" size={"3vw"} />
-          </button>
-        </footer>
-      </aside>
-
-      <div className="div-form">
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      <div className="create-page-rightside">
+        <form className="create-page-form" onSubmit={handleSubmit(onSubmit)}>
           <fieldset>
             <legend>Dados</legend>
-            <div className="map-do">
+            <div className="create-page-map-do">
               <MapContainer
-                id={"mapa-dados"}
                 center={[8.3693515, -6.8544287]}
                 zoom={3.45}
-                className={"map"}
+                className={"create-page-map"}
                 attributionControl={false}
               >
                 <TileLayer
@@ -122,7 +116,9 @@ function Createpage() {
               </MapContainer>
               <label
                 className={`${
-                  !latlng && errors.latitude ? "do invalid" : "do valid"
+                  !latlng && errors.latitude
+                    ? "create-page-do invalid"
+                    : "create-page-do valid"
                 }`}
               >
                 <span>Clique no mapa para adicionar a localização</span>
@@ -134,7 +130,7 @@ function Createpage() {
               </div>
 
               <input
-                className="coordenada"
+                className="create-page-coordenada"
                 name="latitude"
                 autoComplete="off"
                 ref={register({
@@ -143,7 +139,7 @@ function Createpage() {
                 })}
               />
               <input
-                className="coordenada"
+                className="create-page-coordenada"
                 name="longitude"
                 autoComplete="off"
                 ref={register({
@@ -152,11 +148,13 @@ function Createpage() {
                 })}
               />
             </div>
-            <div className="input-data">
+            <div className="create-page-input-data">
               <label>Nome</label>
               <input
                 className={`${
-                  errors.name ? "main-name invalid" : "main-name valid"
+                  errors.name
+                    ? "create-page-name invalid"
+                    : "create-page-name valid"
                 }`}
                 name="name"
                 placeholder="O nome do orfanato..."
@@ -171,11 +169,13 @@ function Createpage() {
                 ) : null}
               </div>
             </div>
-            <div className="input-data">
+            <div className="create-page-input-data">
               <label>Sobre</label>
               <textarea
                 className={`${
-                  errors.about ? "main-about invalid" : "main-about valid"
+                  errors.about
+                    ? "create-page-about invalid"
+                    : "create-page-about valid"
                 }`}
                 name="about"
                 placeholder="Sobre o orfanato..."
@@ -189,10 +189,10 @@ function Createpage() {
                 ) : null}
               </div>
             </div>
-            <div className="input-data">
+            <div className="create-page-input-data">
               <label>Fotos</label>
 
-              <div className="image-container">
+              <div className="create-page-container">
                 {previewImages.map((image) => {
                   return <img key={image} src={image} />;
                 })}
@@ -202,14 +202,15 @@ function Createpage() {
                 htmlFor="imagem"
                 className={`${
                   errors.pictures
-                    ? "pictures invalid"
-                    : "pictures valid-pictures"
+                    ? "create-page-pictures invalid"
+                    : "create-page-pictures valid-pictures"
                 }`}
               >
                 <FiPlus
-                  size={24}
                   className={`${
-                    errors.pictures ? "invalid-plus" : "valid-plus"
+                    errors.pictures
+                      ? "create-page-plus invalid-plus"
+                      : "create-page-plus valid-plus"
                   }`}
                 />
               </label>
@@ -234,13 +235,13 @@ function Createpage() {
           </fieldset>
           <fieldset>
             <legend>Visitação</legend>
-            <div className="input-visitation">
+            <div className="create-page-input-data">
               <label>Instruções</label>
               <textarea
                 className={`${
                   errors.instructions
-                    ? "main-instructions invalid"
-                    : "main-instructions valid"
+                    ? "create-page-instructions invalid"
+                    : "create-page-instructions valid"
                 }`}
                 name="instructions"
                 placeholder="O que devemos fazer para visitá-los...."
@@ -254,13 +255,13 @@ function Createpage() {
                 ) : null}
               </div>
             </div>
-            <div className="input-visitation">
+            <div className="create-page-input-data">
               <label>Horário das visitas</label>
               <input
                 className={`${
                   errors.opening_hours
-                    ? "main-opening_hours invalid"
-                    : "main-opening_hours valid"
+                    ? "create-page-opening-hours invalid"
+                    : "create-page-opening-hours valid"
                 }`}
                 name="opening_hours"
                 autoComplete="off"
@@ -277,13 +278,13 @@ function Createpage() {
                 ) : null}
               </div>
             </div>
-            <div className="input-visitation">
+            <div className="create-page-input-data">
               <label>Atende fim de semana</label>
 
-              <div className="button-select">
+              <div className="create-page-button-select">
                 <input
                   name="open_on_weekends"
-                  id="open_on_weekends_true"
+                  id="open-on-weekends-true"
                   type="radio"
                   value="true"
                   ref={register({
@@ -293,16 +294,16 @@ function Createpage() {
                 <label
                   className={`${
                     errors.open_on_weekends
-                      ? "simulate-button-true invalid"
-                      : "simulate-button-true valid"
+                      ? "create-page-button-true invalid"
+                      : "create-page-button-true valid"
                   }`}
-                  htmlFor="open_on_weekends_true"
+                  htmlFor="open-on-weekends-true"
                 >
                   SIM
                 </label>
                 <input
                   name="open_on_weekends"
-                  id="open_on_weekends_false"
+                  id="open-on-weekends-false"
                   type="radio"
                   value="false"
                   ref={register({
@@ -312,10 +313,10 @@ function Createpage() {
                 <label
                   className={`${
                     errors.open_on_weekends
-                      ? "simulate-button-false invalid"
-                      : "simulate-button-false valid"
+                      ? "create-page-button-false invalid"
+                      : "create-page-button-false valid"
                   }`}
-                  htmlFor="open_on_weekends_false"
+                  htmlFor="open-on-weekends-false"
                 >
                   NÃO
                 </label>
@@ -327,12 +328,12 @@ function Createpage() {
               ) : null}
             </div>
           </fieldset>
-          <button className="submit-button" type="submit">
+          <button className="create-page-submit-button" type="submit">
             Confirmar
           </button>
         </form>
       </div>
-    </section>
+    </div>
   );
 }
 

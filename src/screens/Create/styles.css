@@ -1,77 +1,37 @@
 /* ===================================================================:: */
 /* page content */
-#content-container {
+#create-page {
   width: 100vw;
-  background: rgb(255, 255, 255);
-}
-/* ===================================================================:: */
-/* side-bar */
-aside.app-sidebar {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  height: 100%;
-  width: 11%;
-
-  padding: 3vw 0rem 3vw 3vw;
-  background: #f9fafb;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-aside.app-sidebar img {
-  width: 5vw;
-  height: 5vw;
-}
-aside.app-sidebar footer button {
-  width: 5vw;
-  height: 5vw;
-
-  border: 0;
-
-  background: #0d4e6b;
-  border: solid #0d4e6b;
-  border-radius: 1.75vw;
-
-  cursor: pointer;
-
-  transition: background-color 0.5s;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-aside.app-sidebar footer button:hover {
-  background: #f9fafb;
-}
-aside.app-sidebar .createpage-arrow {
-  color: rgba(255, 214, 102, 1);
-  transition: 1s;
-}
-button:hover .createpage-arrow {
-  color: #0d4e6b;
+  background-color: var(--background);
+  color: var(--blue);
 }
 /* ===================================================================:: */
 /* form */
-#content-container .div-form {
+.create-page-rightside {
   position: absolute;
   right: 0px;
   top: 0px;
 
-  width: 89%;
+  width: 93.3333%;
   min-height: 100%;
-  background: linear-gradient(#0d4e6b, white);
-  padding: 3vw 0 3vw 0;
+  background: linear-gradient(var(--blue), var(--background));
+  padding: 2.2222vw 0 2.2222vw 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#content-container .div-form .form {
+.create-page-form {
+  /* width: 62.5vw;
+  border-radius: 1.6851vw;
+  background-color: var(--background); */
+
   width: 75%;
   margin: auto;
 
-  background: white;
-  border-radius: 20px;
+  background-color: var(--background);
+  border-radius: 1.7638vw;
 
   padding: 5vw 5vw;
 
@@ -79,24 +39,22 @@ button:hover .createpage-arrow {
   z-index: 4;
 }
 
-form.form fieldset legend {
+.create-page-form legend {
   width: 100%;
 
-  font-size: 32px;
-  line-height: 34px;
-  color: #0d4e6b;
+  font-size: 2.8222vw;
+  line-height: 2.9986vw;
   font-weight: 700;
 
-  border-bottom: 1px solid #d3e2e5;
-  margin-bottom: 40px;
-  padding-bottom: 24px;
+  border-bottom: 0.0882vw solid var(--blue);
+  margin-bottom: 3.5277vw;
+  padding-bottom: 2.1166vw;
 }
 
-form.form label {
+.create-page-form label {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  color: #0d4e6b;
+  font-size: 1.4111vw;
+  line-height: 1.9402vw;
 }
 
 /* ===================================================================:: */
@@ -105,8 +63,9 @@ form.form label {
 -> https://markheath.net/post/customize-radio-button-css
 */
 #imagem,
-.coordenada,
-input[type="radio"] {
+.create-page-coordenada,
+#open-on-weekends-true,
+#open-on-weekends-false {
   position: absolute;
   overflow: hidden;
   width: 0.1px;
@@ -118,83 +77,81 @@ input[type="radio"] {
 
 /* ===================================================================:: */
 /* confirm button */
-form.form button.submit-button {
-  margin-top: 64px;
+.create-page-submit-button {
+  margin-top: 5.6444vw;
 
   width: 100%;
-  height: 64px;
+  height: 5.6444vw;
   border: 0;
   cursor: pointer;
-  background-color: #37c77f;
-  border-radius: 20px;
-  color: #f9fafb;
+  background-color: var(--submit-button);
+  border-radius: 1.7638vw;
+  color: var(--background);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 18px;
+  font-size: 1.5875vw;
   font-style: italic;
 
   transition: background-color 0.2s;
 }
-form.form button.submit-button:hover {
-  background-color: #3ee08f;
+.create-page-submit-button:hover {
+  background-color: var(--hover-submit-button);
 }
 /* ===================================================================:: */
 /* spacing */
-#content-container fieldset {
+#create-page fieldset {
   border: none;
 }
-#content-container fieldset + fieldset {
-  margin-top: 5vw;
+#create-page fieldset + fieldset {
+  margin-top: 7.0555vw;
 }
-.input-data + .input-data,
-.map-do + .input-data,
-.input-visitation + .input-visitation {
-  margin-top: 2vw;
+.create-page-input-data + .create-page-input-data,
+.create-page-map-do + .create-page-input-data {
+  margin-top: 2.1166vw;
 }
-#content-container label + input,
-#content-container label + label,
-#content-container label + textarea,
-#content-container label + .button-select {
-  margin-top: 0.65vw;
+#create-page label + input,
+#create-page label + label,
+#create-page label + textarea,
+#create-page label + .create-page-button-select {
+  margin-top: 0.7055vw;
 }
-#content-container input,
-#content-container textarea {
-  padding: 26px 18px;
+#create-page input,
+#create-page textarea {
+  padding: 2.293vw 1.5875vw;
 }
-
 /* ===================================================================:: */
 /* MAP */
-form.form .map-do {
-  background-color: white;
-  border-radius: 20px;
+.create-page-map-do {
+  background-color: var(--background);
+  border-radius: 1.7638vw;
   width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-form.form .map {
+.create-page-map {
   width: 100%;
-  height: 280px;
-  border-radius: 20px 20px 0 0;
+  height: 24.6944vw;
+  border-radius: 1.7638vw 1.7638vw 0 0;
 
   border: none;
 }
-form.form .do {
+.create-page-do {
   width: 100%;
-  height: 30px;
-  border-radius: 0 0 20px 20px;
-  color: #0089a5;
+  height: 2.6458vw;
+  border-radius: 0 0 1.7638vw 1.7638vw;
+  color: var(--blue);
 
-  font-size: 13px;
+  font-size: 1.1465vw;
   font-weight: 700;
 
   border: none;
 
-  padding: 20px 15px;
+  padding: 1.7638vw 1.3229vw;
 
   display: flex;
   align-items: center;
@@ -203,72 +160,72 @@ form.form .do {
 /* ===================================================================:: */
 /* Input name */
 /* Input opening_hours */
-.main-name,
-.main-opening_hours {
+.create-page-name,
+.create-page-opening-hours {
   display: block;
   position: relative;
   width: 100%;
-  height: 64px;
-  border-radius: 20px;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
 
-  font-size: 16px;
+  font-size: 1.4111vw;
   border: none;
 }
 /* ===================================================================:: */
 /* Textarea about */
 /* Textarea instructions */
-.main-about,
-.main-instructions {
+.create-page-about,
+.create-page-instructions {
   display: block;
   position: relative;
   width: 100%;
-  height: 120px;
-  border-radius: 20px;
+  height: 10.5833vw;
+  border-radius: 1.7638vw;
 
-  font-size: 16px;
+  font-size: 1.4111vw;
 
   border: none;
   resize: none;
 }
 /* ===================================================================:: */
 /* Radio Buttons */
-form.form .input-visitation .button-select {
+.create-page-button-select {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.simulate-button-true,
-.simulate-button-false {
+.create-page-button-true,
+.create-page-button-false {
   width: 100%;
-  height: 64px;
+  height: 5.6444vw;
 
-  background: #f5f8fa;
+  background: var(--valid-data);
   cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.simulate-button-true:hover,
-.simulate-button-false:hover {
-  background-color: #00000011;
+.create-page-button-true:hover,
+.create-page-button-false:hover {
+  background-color: var(--hover-button);
 }
-input[type="radio"]:checked + .simulate-button-true,
-input[type="radio"]:checked + .simulate-button-false {
-  background-color: #a6faae;
-  border: 1.5px solid #25d824;
+input[type="radio"]:checked + .create-page-button-true,
+input[type="radio"]:checked + .create-page-button-false {
+  background-color: var(--select-button);
+  border: 0.1323vw solid var(--border-select-button);
 }
-.simulate-button-true {
-  border-radius: 20px 0px 0px 20px;
+.create-page-button-true {
+  border-radius: 1.7638vw 0 0 1.7638vw;
 }
-.simulate-button-false {
-  border-radius: 0 20px 20px 0;
+.create-page-button-false {
+  border-radius: 0 1.7638vw 1.7638vw 0;
   border-left: 0;
 }
 /* ===================================================================:: */
 /* Eliminate focus */
-input:focus,
-textarea:focus,
-button:focus {
+#create-page input:focus,
+#create-page textarea:focus,
+#create-page button:focus {
   outline: none;
 }
 /* ===================================================================:: */
@@ -277,22 +234,22 @@ button:focus {
   -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
   box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
   transition: box-shadow 0.2s linear, background-color 0.2s linear;
-  background-color: #fffbfbef;
+  background-color: var(--invalid-data);
 }
 .valid {
   transition: box-shadow 0.2s linear, background-color 0.2s linear;
-  background-color: #f5f8fa;
+  background-color: var(--valid-data);
 }
 .valid-pictures {
   transition: box-shadow 0.2s linear, background-color 0.2s linear;
-  background-color: #f5f8fa;
-  border: 1px dashed #96d2f0;
+  background-color: var(--valid-data);
+  border: 0.0881vw dashed var(--blue);
 }
 .valid-plus {
-  color: #15b6d6;
+  color: var(--blue);
 }
 .invalid-plus {
-  color: rgba(255, 0, 0, 0.5);
+  color: var(--invalid-plus);
 }
 /* ===================================================================:: */
 /* Customization style errors */
@@ -303,10 +260,9 @@ button:focus {
   justify-content: flex-start;
 }
 .error-message {
-  color: #bf1650;
-  font-size: 10px;
-  padding-top: 0.25rem;
-  padding-left: 18px;
+  color: var(--msg-error);
+  font-size: 1.2vw;
+  padding: 0.7055vw 1.5875vw 0 1.5875vw;
 }
 .error-message::before {
   display: inline;
@@ -314,15 +270,15 @@ button:focus {
 }
 /* ===================================================================:: */
 /* Pictures */
-form.form .input-data .pictures {
+.create-page-pictures {
   display: block;
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 64px;
-  border-radius: 20px;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
 
-  font-size: 16px;
+  font-size: 1.4111vw;
 
   cursor: pointer;
 
@@ -330,16 +286,20 @@ form.form .input-data .pictures {
   justify-content: center;
   align-items: center;
 }
-.image-container {
+.create-page-container {
   margin-top: 0.65vw;
   margin-bottom: 0.65vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1vw;
 }
-.image-container img {
+.create-page-container img {
   width: 100%;
   height: 20vw;
   object-fit: cover;
   border-radius: 1vw;
+}
+.create-page-plus {
+  width: 2.1166vw;
+  height: 2.1166vw;
 }

@@ -7,7 +7,17 @@
   --background-popup: #fbfcfceb;
   --button-leaflet: #ebebeb;
   --skeleton: #f4f4f4;
+  --invalid-data: #fffbfbef;
+  --valid-data: #f5f8fa;
+  --invalid-plus: #ff000080;
+  --hover-button: #00000011;
+  --select-button: #a6faae;
+  --border-select-button: #25d824;
+  --submit-button: #37c77f;
+  --hover-submit-button: #3ee08f;
+  --msg-error: #bf1650;
 }
+
 * {
   margin: 0;
   padding: 0;
