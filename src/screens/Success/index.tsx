@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegSmileBeam } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import SuccessImg from "../../images/success.svg";
 import "./styles.css";
@@ -19,9 +20,9 @@ function Successpage() {
             Agora é só esperar <FaRegSmileBeam />
           </p>
         </div>
-        <div id="sp-comeback">
+        <Link to="/map" id="sp-comeback">
           <input type="button" value="Voltar para o mapa" />
-        </div>
+        </Link>
       </div>
       <div className="sp-right">
         <div id="sp-pictures">
