@@ -9,6 +9,7 @@ import Detailpage from "./screens/Detail";
 import Loginpage from "./screens/dashboard/Login";
 import Registeredpage from "./screens/dashboard/Registered";
 import Pendingpage from "./screens/dashboard/Pending";
+import PrivateRoute from "./components/routes/PrivateRoute";
 
 function Routes() {
   return (
@@ -20,8 +21,12 @@ function Routes() {
         <Route exact path="/map/create/success" component={Successpage} />
         <Route exact path="/orphanage/:_id" component={Detailpage} />
         <Route exact path="/dashboard/login" component={Loginpage} />
-        <Route exact path="/dashboard/registered" component={Registeredpage} />
-        <Route exact path="/dashboard/pending" component={Pendingpage} />
+        <PrivateRoute
+          exact
+          path="/dashboard/registered"
+          component={Registeredpage}
+        />
+        <PrivateRoute exact path="/dashboard/pending" component={Pendingpage} />
       </Switch>
     </BrowserRouter>
   );
