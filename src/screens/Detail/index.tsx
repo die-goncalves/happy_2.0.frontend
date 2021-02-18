@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./styles.css";
-import "leaflet/dist/leaflet.css";
 import api from "../../services/api";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import L from "leaflet";
-import mapMarker from "../../images/map-marker.svg";
 import { FiClock, FiInfo, FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import SidebarPublic from "../../components/SidebarPublic";
+import mapIcon from "../../utils/mapIcon";
+import { Orphanage } from "../../interfaces/orphanages";
+
+import "./styles.css";
+import "leaflet/dist/leaflet.css";
 
 function sideScroll(
   element: HTMLElement,
@@ -34,32 +35,9 @@ function sideScroll(
   }, speed);
 }
 
-interface Orphanage {
-  latitude: number;
-  longitude: number;
-  name: string;
-  about: string;
-  instructions: string;
-  opening_hours: string;
-  open_on_weekends: boolean;
-  pictures: Array<{
-    _id: any;
-    destination: string;
-    filename: string;
-  }>;
-}
-
 interface OrphanageParams {
   _id: any;
 }
-
-const mapIcon = L.icon({
-  iconUrl: mapMarker,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60],
-});
 
 function Detailpage() {
   const [orphanage, setOrphanage] = useState<Orphanage>();

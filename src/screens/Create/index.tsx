@@ -1,23 +1,15 @@
 import React, { ChangeEvent, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
-import L from "leaflet";
 import { FiPlus } from "react-icons/fi";
 import { useForm } from "react-hook-form";
-import mapMarker from "../../images/map-marker.svg";
 import api from "../../services/api";
+import SidebarPublic from "../../components/SidebarPublic";
+import mapIcon from "../../utils/mapIcon";
 
 import "./styles.css";
 import "leaflet/dist/leaflet.css";
-import SidebarPublic from "../../components/SidebarPublic";
 
-const mapIcon = L.icon({
-  iconUrl: mapMarker,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60],
-});
 interface UserData {
   name: string;
   latitude: number;

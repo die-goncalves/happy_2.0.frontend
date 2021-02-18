@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { FaRegSmileBeam, FaPlus } from "react-icons/fa";
-
-import "./styles.css";
-import WorldMap, { Orphanages } from "../../components/Map/WorldMap";
+import WorldMap from "../../components/Map/WorldMap";
 import api from "../../services/api";
 import { Link } from "react-router-dom";
+import { Orphanage } from "../../interfaces/orphanages";
+
+import "./styles.css";
 
 function Mappage() {
-  const [orphanages, setOrphanages] = useState<Orphanages[]>([]);
+  const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 
   useEffect(() => {
     api.get("hosting").then((response) => {

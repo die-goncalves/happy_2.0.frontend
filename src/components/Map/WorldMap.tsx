@@ -4,31 +4,13 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
 import MarkUser from "./MarkUser";
 import MyLocation from "./MyLocation";
-import mapMarkerImg from "../../images/map-marker.svg";
-import L from "leaflet";
+import mapIcon from "../../utils/mapIcon";
+import { OrphanagesWorldParams } from "../../interfaces/orphanages";
+
 import "leaflet/dist/leaflet.css";
 import "./WorldMap.css";
 
-export interface Orphanages {
-  _id?: any;
-  latitude: number;
-  longitude: number;
-  name: string;
-}
-type WorldMapParams = {
-  orphanages: Orphanages[];
-};
-
-const mapIcon = L.icon({
-  className: "customIcon",
-  iconUrl: mapMarkerImg,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -68],
-});
-
-export default function WorldMap({ orphanages }: WorldMapParams) {
+export default function WorldMap({ orphanages }: OrphanagesWorldParams) {
   const [pos, setpos] = useState<GeolocationPosition | null>(null);
 
   if ("geolocation" in navigator) {
@@ -59,7 +41,7 @@ export default function WorldMap({ orphanages }: WorldMapParams) {
       />
       {pos ? <MarkUser mylocation={pos} /> : null}
       {pos ? <MyLocation mylocation={pos} /> : null}
-      {orphanages.map((orphanage: Orphanages) => {
+      {orphanages.map((orphanage) => {
         return (
           <Marker
             key={orphanage._id}
