@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./styles.css";
 import LogotipoImg from "../../../images/logotipo.svg";
 import CustomCheckbox from "../../../hooks/useCustomCheckbox";
 import PasswordToggle from "../../../hooks/usePasswordToggle";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useAuth } from "../../../context/auth-context";
 
 interface IFormInput {
   email: string;
@@ -14,14 +15,30 @@ interface IFormInput {
 }
 
 function Loginpage() {
+  const [recognize, setRecognize] = useState<number>(0);
   const { InputType, Icon } = PasswordToggle();
   const { check, CheckBox } = CustomCheckbox();
+  const { logIn } = useAuth();
+  const history = useHistory();
 
   const { register, handleSubmit, errors, watch } = useForm<IFormInput>();
   const watchPassword = watch("password");
 
-  const onSubmit = (data: IFormInput) => {
-    console.log(data);
+  const onSubmit = async (data: IFormInput) => {
+    // console.log(data);
+    const multipartForm = new FormData();
+    multipartForm.append("email", data.email);
+    multipartForm.append("password", data.password);
+
+    await logIn(multipartForm).then(
+      () => {
+        setRecognize(0);
+        history.push("/dashboard/registered");
+      },
+      () => {
+        setRecognize(recognize + 1);
+      }
+    );
   };
 
   return (
@@ -120,79 +137,22 @@ function Loginpage() {
               </div>
             </div>
           </fieldset>
-          <button className="submit-button" type="submit">
-            Entrar
-          </button>
-        </form>
-        {/* <form className="lp-form">
-          <fieldset>
-            <legend>Crie sua conta</legend>
-            <div className="input-essencial">
-              <label htmlFor="email">Email</label>
-              <input
-                className={`${errors.email ? "is-invalid" : "valid"}`}
-                name="email"
-                placeholder="fulano@email.com"
-                autoComplete="off"
-                // type="email"
-                ref={register({
-                  required: "Campo obrigatório",
-                  pattern: {
-                    value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    message: "Endereço de email inválido",
-                  },
-                })}
-              />
-              {errors.email ? (
-                <p className="error-message">{errors.email.message}</p>
-              ) : (
-                <p className="gap-10"></p>
-              )}
-            </div>
 
-            <div className="input-essencial">
-              <label>Senha</label>
-              <div className="container">
-                <div id="input-password">
-                  <input
-                    id={`${errors.password ? "is-invalid" : "valid"}`}
-                    name="password"
-                    placeholder="123456;)"
-                    autoComplete="off"
-                    ref={register({
-                      required: "Campo obrigatório",
-                      minLength: {
-                        value: 8,
-                        message: "Sua senha deve ter no mínimo 8 caracteres",
-                      },
-                    })}
-                  />
-                  <span className="focus-border">
-                    <i></i>
-                  </span>
-                </div>
-
-                <div
-                  className={`${
-                    errors.password
-                      ? "div-icon-eye-invalid"
-                      : "div-icon-eye-valid"
-                  }`}
-                >
-                  {!(
-                    getValues("password") === undefined ||
-                    getValues("password") === ""
-                  ) && <i className="password-toggle-icon"></i>}
-                </div>
+          <div className="login-page-recognize-button">
+            {recognize !== 0 && (
+              <div className="login-page-recognize">
+                <p>
+                  <span>{recognize}!</span> E-mail e senha não batem com nenhum
+                  usuário cadastrado.
+                </p>
               </div>
-              {errors.password ? (
-                <p className="error-message">{errors.password.message}</p>
-              ) : (
-                <p className="gap-10"></p>
-              )}
-            </div>
-          </fieldset>
-        </form> */}
+            )}
+
+            <button className="submit-button" type="submit">
+              Entrar
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -1,9 +1,3 @@
-:root {
-  --custom-white: #f9fafb;
-  --custom-blue: #0d4e6b;
-  --custom-blue-01: #0d4d6bad;
-  --custom-label: #8fa7b3;
-}
 #login-page {
   width: 100vw;
   height: 100vh;
@@ -16,7 +10,7 @@
 .lp-left {
   width: 60vw;
   height: inherit;
-  background-color: var(--custom-white);
+  background-color: var(--background);
 
   display: flex;
   flex-direction: column;
@@ -36,12 +30,12 @@
   flex-direction: column;
   text-align: center;
 
-  color: var(--custom-blue);
+  color: var(--blue);
 }
 .lp-right {
   width: 40vw;
   height: inherit;
-  border-left: 0.25vw solid var(--custom-blue);
+  border-left: 0.25vw solid var(--blue);
   background-color: white;
   display: flex;
   align-items: center;
@@ -70,9 +64,12 @@
   border: none;
   border-radius: 1.388vw;
   padding: 1.666vw 1.458vw;
-  /* background-color: #f5f8fa; */
 
   font-size: 1.111vw;
+}
+#login-page input:focus,
+#login-page button:focus {
+  outline: none;
 }
 /* ===================================================================:: */
 /* legend */
@@ -82,7 +79,7 @@
   font-size: 2.222vw;
   font-weight: 700;
   line-height: 2.361vw;
-  color: var(--custom-blue);
+  color: var(--blue);
 }
 /* ===================================================================:: */
 /* labels */
@@ -90,7 +87,7 @@
   font-size: 1.12vw;
   line-height: 1.53vw;
   margin-bottom: 0.65vw;
-  color: var(--custom-blue);
+  color: var(--blue);
 }
 /* ===================================================================:: */
 /* space inputs */
@@ -101,17 +98,44 @@
   margin-top: 1.666vw;
 }
 /* ===================================================================:: */
+/* Recognize */
+.login-page-recognize-button {
+  width: 25vw;
+  margin-top: 2.777vw;
+}
+.login-page-recognize {
+  width: 100%;
+  height: 4.167vw;
+  padding: 1.666vw 1.458vw;
+  margin-bottom: 0.65vw;
+
+  background-color: var(--invalid-data);
+  border-radius: 1.3888vw;
+  border: 0.0694vw solid rgba(255, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.903vw;
+  color: var(--msg-error);
+}
+.login-page-recognize span {
+  background-color: rgba(255, 0, 0, 0.185);
+  padding: 0 0.5vw 0 0.5vw;
+  border-radius: 0.35vw;
+  margin-right: 0.5vw;
+}
+/* ===================================================================:: */
 /* confirm button */
 .submit-button {
-  margin-top: 2.777vw;
-
-  width: 25vw;
+  width: 100%;
   height: 4.167vw;
   border: 0;
   cursor: pointer;
-  background-color: #37c77f;
-  border-radius: 20px;
-  color: #f9fafb;
+  background-color: var(--submit-button);
+  border-radius: 1.3888vw;
+  color: var(--background);
 
   display: flex;
   justify-content: center;
@@ -123,7 +147,7 @@
   transition: background-color 0.2s;
 }
 .submit-button:hover {
-  background-color: #3ee08f;
+  background-color: var(--hover-submit-button);
 }
 
 /* ===================================================================:: */
@@ -216,25 +240,21 @@
   border-radius: 1.111vw;
 
   padding: 0.8333vw;
-  background-color: var(--custom-blue);
-  border: 0.15vw solid var(--custom-blue);
+  background-color: var(--blue);
 
-  transition: background-color 0.5s;
+  transition: background-color 0.2s;
 }
 
 #login-page .voltar .box-arrow:hover {
-  background: white;
+  background: var(--blue-weak);
 }
 
 #login-page .voltar .box-arrow .arrow {
   width: max-content;
   height: max-content;
 
-  color: rgba(255, 214, 102, 1);
+  color: var(--background);
   transition: color 0.5s;
-}
-#login-page .voltar .box-arrow:hover .arrow {
-  color: var(--custom-blue);
 }
 /* ===================================================================:: */
 /* Input and textarea animation for errors */
@@ -242,11 +262,11 @@
   -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
   box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
   transition: box-shadow 0.2s linear, background-color 0.2s linear;
-  background-color: #fffbfbef;
+  background-color: var(--invalid-data);
 }
 #login-page .valid {
   transition: box-shadow 0.2s linear, background-color 0.2s linear;
-  background-color: #f5f8fa;
+  background-color: var(--valid-data);
 }
 /* ===================================================================:: */
 /* Customization style errors */
@@ -257,7 +277,7 @@
   justify-content: flex-start;
 }
 #login-page .error-message {
-  color: #bf1650;
+  color: var(--msg-error);
   font-size: 0.903vw;
   padding-top: 0.347vw;
   padding-left: 1.458vw;
