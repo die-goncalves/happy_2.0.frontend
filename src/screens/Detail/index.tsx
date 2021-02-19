@@ -53,7 +53,7 @@ function Detailpage() {
   if (!orphanage) {
     return (
       <div id="detail-page">
-        <SidebarPublic />
+        <SidebarPublic path="/map" />
 
         <div className="skeleton-right-side">
           <div className="skeleton-content">
@@ -89,7 +89,7 @@ function Detailpage() {
 
   return (
     <div id="detail-page">
-      <SidebarPublic />
+      <SidebarPublic path="/map" />
 
       <div className="detail-page-rightside">
         <div className="detail-page-orphanage">

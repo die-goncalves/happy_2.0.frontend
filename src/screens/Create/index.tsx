@@ -87,7 +87,7 @@ function Createpage() {
   // console.log(watch("pictures"));
   return (
     <div id="create-page">
-      <SidebarPublic />
+      <SidebarPublic path="/map" />
 
       <div className="create-page-rightside">
         <form className="create-page-form" onSubmit={handleSubmit(onSubmit)}>
