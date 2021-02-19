@@ -10,6 +10,7 @@ import Loginpage from "./screens/dashboard/Login";
 import Registeredpage from "./screens/dashboard/Registered";
 import Pendingpage from "./screens/dashboard/Pending";
 import PrivateRoute from "./components/routes/PrivateRoute";
+import Editpending from "./screens/dashboard/EditPending";
 
 function Routes() {
   return (
@@ -27,6 +28,11 @@ function Routes() {
           component={Registeredpage}
         />
         <PrivateRoute exact path="/dashboard/pending" component={Pendingpage} />
+        <PrivateRoute
+          exact
+          path="/dashboard/pending/:_id"
+          component={Editpending}
+        />
       </Switch>
     </BrowserRouter>
   );
