@@ -1,0 +1,267 @@
+/* ===================================================================:: */
+/* page content */
+#edit-pending {
+  width: 100vw;
+  background-color: var(--background);
+  color: var(--blue);
+}
+/* ===================================================================:: */
+/* form */
+.edit-pending-rightside {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  width: 93.3333%;
+  min-height: 100%;
+  background: linear-gradient(var(--blue), var(--background));
+  padding: 2.2222vw 0 2.2222vw 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-pending-section {
+  width: 75%;
+  margin: auto;
+
+  background-color: var(--background);
+  border-radius: 1.7638vw 1.7638vw 0 0;
+  padding: 5vw 5vw;
+
+  overflow: hidden;
+}
+
+.edit-pending-section legend {
+  width: 100%;
+
+  font-size: 2.8222vw;
+  line-height: 2.9986vw;
+  font-weight: 700;
+
+  border-bottom: 0.0882vw solid var(--blue);
+  margin-bottom: 3.5277vw;
+  padding-bottom: 2.1166vw;
+}
+
+.edit-pending-section label {
+  font-weight: 700;
+  font-size: 1.4111vw;
+  line-height: 1.9402vw;
+}
+
+/* ===================================================================:: */
+/* spacing */
+#edit-pending fieldset {
+  border: none;
+}
+#edit-pending fieldset + fieldset {
+  margin-top: 7.0555vw;
+}
+.edit-pending-input-data + .edit-pending-input-data,
+.edit-pending-map-do + .edit-pending-input-data {
+  margin-top: 2.1166vw;
+}
+#edit-pending label + input,
+#edit-pending label + textarea,
+#edit-pending label + .edit-pending-button-select {
+  margin-top: 0.7055vw;
+}
+#edit-pending input,
+#edit-pending textarea {
+  padding: 2.293vw 1.5875vw;
+}
+/* ===================================================================:: */
+/* MAP */
+.edit-pending-map-do {
+  background-color: var(--background);
+  border-radius: 1.7638vw;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.edit-pending-map {
+  width: 100%;
+  height: 24.6944vw;
+  border-radius: 1.7638vw 1.7638vw 0 0;
+
+  border: none;
+}
+.edit-pending-do {
+  width: 100%;
+  height: 2.6458vw;
+  border-radius: 0 0 1.7638vw 1.7638vw;
+  color: var(--blue);
+
+  font-size: 1.1465vw;
+  font-weight: 700;
+
+  border: none;
+
+  padding: 1.7638vw 1.3229vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===================================================================:: */
+/* Input name */
+/* Input opening_hours */
+.edit-pending-name,
+.edit-pending-opening-hours {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
+
+  font-size: 1.4111vw;
+  border: none;
+}
+/* ===================================================================:: */
+/* Textarea about */
+/* Textarea instructions */
+.edit-pending-about,
+.edit-pending-instructions {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 10.5833vw;
+  border-radius: 1.7638vw;
+
+  font-size: 1.4111vw;
+
+  border: none;
+  resize: none;
+}
+/* ===================================================================:: */
+/* Radio Buttons */
+.edit-pending-button-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.edit-pending-button-true,
+.edit-pending-button-false {
+  width: 100%;
+  height: 5.6444vw;
+
+  background-color: var(--valid-data);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-pending-button-true {
+  border-radius: 1.7638vw 0 0 1.7638vw;
+}
+.edit-pending-button-false {
+  border-radius: 0 1.7638vw 1.7638vw 0;
+  border-left: 0;
+}
+.edit-pending-button-green {
+  background-color: var(--select-button);
+  border: 0.1323vw solid var(--border-select-button);
+}
+.edit-pending-refuse-accept button {
+  border: none;
+  cursor: pointer;
+}
+.edit-pending-refuse-accept button:focus {
+  outline: none;
+}
+/* ===================================================================:: */
+/* Input and textarea*/
+.edit-pending-do,
+.edit-pending-name,
+.edit-pending-about,
+.edit-pending-instructions,
+.edit-pending-opening-hours {
+  background-color: var(--valid-data);
+}
+.edit-pending-valid-pictures {
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: var(--valid-data);
+  border: 0.0881vw dashed var(--blue);
+}
+.edit-pending-valid-plus {
+  color: var(--blue);
+}
+/* ===================================================================:: */
+/* Pictures */
+.edit-pending-pictures {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
+
+  font-size: 1.4111vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-pending-grid {
+  margin-top: 0.65vw;
+  margin-bottom: 0.65vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1vw;
+}
+.edit-pending-grid img {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+  border-radius: 1vw;
+}
+.edit-pending-plus {
+  width: 2.1166vw;
+  height: 2.1166vw;
+}
+
+/* ===================================================================:: */
+/* refuse accept */
+.edit-pending-refuse-accept {
+  width: 75%;
+  margin: auto;
+  /* height: 14.1111vw; */
+  padding: 3.3333vw 5vw;
+  border-radius: 0 0 1.7638vw 1.7638vw;
+
+  background-color: var(--footer-pending-refuse-accept);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit-pending-refuse,
+.edit-pending-accept {
+  width: 28vw;
+  height: 5.6444vw;
+  border-radius: 1.7638vw 1.7638vw 1.7638vw 1.7638vw;
+  color: var(--background);
+
+  font-size: 1.5875vw;
+  line-height: 2.293vw;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-pending-refuse {
+  background-color: #ff669d;
+}
+.edit-pending-accept {
+  background-color: #3cdc8c;
+}
+.edit-pending-refuse-icon,
+.edit-pending-accept-icon {
+  width: 2.1166vw;
+  height: 2.1166vw;
+  margin-right: 1vw;
+}
