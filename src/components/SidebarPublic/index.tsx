@@ -5,14 +5,18 @@ import { FiArrowLeft } from "react-icons/fi";
 
 import "./styles.css";
 
-function SidebarPublic() {
+type PathParams = {
+  path: string;
+};
+
+function SidebarPublic({ path }: PathParams) {
   return (
     <div id="sidebar-public">
       <div className="sidebar-public-logo">
         <img src={mapMarker} alt="Happy" />
       </div>
 
-      <Link to="/map" className="sidebar-public-goback">
+      <Link to={path} className="sidebar-public-goback">
         <FiArrowLeft className="sidebar-public-goback-arrow" />
       </Link>
     </div>
