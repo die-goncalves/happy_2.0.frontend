@@ -11,6 +11,7 @@ import Registeredpage from "./screens/dashboard/Registered";
 import Pendingpage from "./screens/dashboard/Pending";
 import PrivateRoute from "./components/routes/PrivateRoute";
 import Editpending from "./screens/dashboard/EditPending";
+import Deletepage from "./screens/dashboard/Delete";
 
 function Routes() {
   return (
@@ -26,6 +27,11 @@ function Routes() {
           exact
           path="/dashboard/registered"
           component={Registeredpage}
+        />
+        <PrivateRoute
+          exact
+          path="/dashboard/registered/delete/:_id"
+          component={Deletepage}
         />
         <PrivateRoute exact path="/dashboard/pending" component={Pendingpage} />
         <PrivateRoute
