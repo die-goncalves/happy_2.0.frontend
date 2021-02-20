@@ -47,3 +47,55 @@
   grid-template-columns: 1fr 1fr;
   gap: 2.222vw 2.222vw;
 }
+
+/* ===================================================================:: */
+/* no orphanages */
+#pending-page-main-zero {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 93.333%;
+  height: 100vh;
+
+  background-color: var(--background);
+
+  display: flex;
+  padding: 4.4444% 7.7777% 4.4444% 7.7777%;
+}
+.pending-page-header-zero {
+  position: absolute;
+  width: 77.7776vw;
+
+  padding-bottom: 1.6666vw;
+  margin-bottom: 2.7777vw;
+  border-bottom: 1px solid var(--blue);
+
+  color: var(--blue);
+}
+.pending-page-header-zero p {
+  font-size: 2.2222vw;
+  font-weight: 700;
+  line-height: 2.3611vw;
+}
+.pending-page-zero-orphanages {
+  position: absolute;
+  top: 42%;
+  bottom: 40%;
+  left: 40%;
+  right: 40%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pending-page-zero-orphanages-image img {
+  width: 5.4166vw;
+  height: 6.1111vw;
+  margin-bottom: 1.1111vw;
+}
+.pending-page-zero-orphanages-text p {
+  font-size: 1.6666vw;
+  color: var(--blue);
+}
