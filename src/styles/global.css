@@ -17,6 +17,9 @@
   --hover-submit-button: #3ee08f;
   --msg-error: #bf1650;
   --footer-pending-refuse-accept: #f6f8f9;
+  --delete: #ff669d;
+  --delete-button: #d6487b;
+  --delete-button-hover: #d6487cc7;
 }
 
 * {

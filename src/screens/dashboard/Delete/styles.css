@@ -1,0 +1,134 @@
+#delete-page {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--delete);
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.delete-page-left {
+  text-align: center;
+}
+#delete-page-title,
+#delete-page-comeback-map,
+#delete-page-comeback-registered,
+#delete-page-description,
+#delete-page-pictures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#delete-page-title p {
+  font-size: 4.85vw;
+  line-height: 5.88vw;
+  font-weight: 700;
+}
+#delete-page-description p {
+  font-size: 1.455vw;
+  line-height: 2.5vw;
+  margin: 2.3426vw 0 4.3924vw 0;
+}
+#delete-page-comeback-map,
+#delete-page-comeback-registered {
+  text-decoration: none;
+}
+#delete-page-comeback-map,
+#delete-page-comeback-registered {
+  height: 4.686vw;
+  padding: 0 1.5vw;
+  border-radius: 1.2125vw;
+  background-color: var(--delete-button);
+  color: var(--background);
+
+  transition: background-color 0.2s;
+}
+#delete-page-comeback-map p,
+#delete-page-comeback-registered p {
+  font-size: 1.09125vw;
+  line-height: 1.515625vw;
+}
+#delete-page-comeback-map:hover,
+#delete-page-comeback-registered:hover {
+  background-color: var(--delete-button-hover);
+}
+#delete-page-pictures img {
+  width: 29.2828vw;
+}
+.delete-page-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#delete-page-comeback-registered {
+  margin-left: 1vw;
+}
+/* ===================================================================:: */
+/* button with spinner */
+.delete-page-button {
+  height: 4.686vw;
+  padding: 1.464125vw 2.92825vw;
+  border-radius: 1.2125vw;
+  background-color: var(--delete-button);
+  color: var(--background);
+
+  transition: background-color 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1vw;
+}
+.delete-page-button p {
+  font-size: 1.09125vw;
+  line-height: 1.515625vw;
+}
+.delete-page-button-question {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+}
+.delete-page-button-question:focus {
+  outline: none;
+}
+.delete-page-button-question:hover {
+  background-color: var(--delete-button-hover);
+}
+.delete-page-button-spinner,
+.delete-page-button-check {
+  width: 100%;
+  border: none;
+}
+.delete-page-spinner,
+.delete-page-check {
+  width: 3vw;
+  height: 3vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===================================================================:: */
+/* animation spinner */
+.fa-spin {
+  animation: fa-spin 0.75s infinite steps(8);
+  width: 100%;
+  height: 100%;
+  color: var(--background);
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.icon-check {
+  width: 100%;
+  height: 100%;
+  color: var(--background);
+}
