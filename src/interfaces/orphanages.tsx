@@ -14,10 +14,14 @@ export interface Orphanage {
   }>;
 }
 
-export type OrphanageParams = {
+export interface OrphanageParams {
+  _id: any;
+}
+
+export type OrphanageProps = {
   orphanage: Orphanage;
 };
 
-export type OrphanagesWorldParams = {
+export type OrphanagesWorldProps = {
   orphanages: Orphanage[];
 };
