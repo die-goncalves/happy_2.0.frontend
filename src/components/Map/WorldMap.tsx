@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import MarkUser from "./MarkUser";
 import MyLocation from "./MyLocation";
 import mapIcon from "../../utils/mapIcon";
-import { OrphanagesWorldParams } from "../../interfaces/orphanages";
+import { OrphanagesWorldProps } from "../../interfaces/orphanages";
 
 import "leaflet/dist/leaflet.css";
 import "./WorldMap.css";
 
-export default function WorldMap({ orphanages }: OrphanagesWorldParams) {
+export default function WorldMap({ orphanages }: OrphanagesWorldProps) {
   const [pos, setpos] = useState<GeolocationPosition | null>(null);
 
   if ("geolocation" in navigator) {

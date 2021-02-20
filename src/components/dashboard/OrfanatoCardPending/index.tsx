@@ -2,11 +2,11 @@ import React from "react";
 import { HiArrowRight } from "react-icons/hi";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
-import { OrphanageParams } from "../../../interfaces/orphanages";
+import { OrphanageProps } from "../../../interfaces/orphanages";
 import mapIcon from "../../../utils/mapIcon";
 import "./styles.css";
 
-function OrfanatoCardPending({ orphanage }: OrphanageParams) {
+function OrfanatoCardPending({ orphanage }: OrphanageProps) {
   return (
     <div id="orfanato-card-pending">
       <div className="orfanato-card-pending-div-map">

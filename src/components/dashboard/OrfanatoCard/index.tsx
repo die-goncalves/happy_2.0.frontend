@@ -2,13 +2,13 @@ import React from "react";
 import { FiTrash2 } from "react-icons/fi";
 import { AiOutlineEdit } from "react-icons/ai";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import { OrphanageParams } from "../../../interfaces/orphanages";
+import { OrphanageProps } from "../../../interfaces/orphanages";
 import mapIcon from "../../../utils/mapIcon";
 import { Link } from "react-router-dom";
 
 import "./styles.css";
 
-function OrfanatoCard({ orphanage }: OrphanageParams) {
+function OrfanatoCard({ orphanage }: OrphanageProps) {
   return (
     <div id="orfanato-card">
       <div className="orfanato-card-div-map">

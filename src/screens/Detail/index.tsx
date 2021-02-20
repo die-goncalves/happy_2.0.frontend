@@ -5,7 +5,7 @@ import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { FiClock, FiInfo, FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import SidebarPublic from "../../components/SidebarPublic";
 import mapIcon from "../../utils/mapIcon";
-import { Orphanage } from "../../interfaces/orphanages";
+import { Orphanage, OrphanageParams } from "../../interfaces/orphanages";
 
 import "./styles.css";
 import "leaflet/dist/leaflet.css";
@@ -33,10 +33,6 @@ function sideScroll(
       window.clearInterval(slideTimer);
     }
   }, speed);
-}
-
-interface OrphanageParams {
-  _id: any;
 }
 
 function Detailpage() {

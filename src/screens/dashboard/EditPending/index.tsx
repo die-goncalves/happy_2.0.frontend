@@ -8,14 +8,10 @@ import api from "../../../services/api";
 import SidebarPublic from "../../../components/SidebarPublic";
 import mapIcon from "../../../utils/mapIcon";
 import { useParams } from "react-router-dom";
-import { Orphanage } from "../../../interfaces/orphanages";
+import { Orphanage, OrphanageParams } from "../../../interfaces/orphanages";
 
 import "./styles.css";
 import "leaflet/dist/leaflet.css";
-
-interface OrphanageParams {
-  _id: any;
-}
 
 function Editpending() {
   const [orphanage, setOrphanage] = useState<Orphanage>();
