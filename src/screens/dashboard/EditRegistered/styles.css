@@ -1,0 +1,340 @@
+/* ===================================================================:: */
+/* page content */
+#edit-registered {
+  width: 100vw;
+  background-color: var(--background);
+  color: var(--blue);
+}
+/* ===================================================================:: */
+/* form */
+.edit-registered-rightside {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  width: 93.3333%;
+  min-height: 100%;
+  background: linear-gradient(var(--blue), var(--background));
+  padding: 2.2222vw 0 2.2222vw 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-registered-form {
+  /* width: 62.5vw;
+  border-radius: 1.6851vw;
+  background-color: var(--background); */
+
+  width: 75%;
+  margin: auto;
+
+  background-color: var(--background);
+  border-radius: 1.7638vw;
+
+  padding: 5vw 5vw;
+
+  overflow: hidden;
+  z-index: 4;
+}
+
+.edit-registered-form legend {
+  width: 100%;
+
+  font-size: 2.8222vw;
+  line-height: 2.9986vw;
+  font-weight: 700;
+
+  border-bottom: 0.0882vw solid var(--blue);
+  margin-bottom: 3.5277vw;
+  padding-bottom: 2.1166vw;
+}
+
+.edit-registered-form label {
+  font-weight: 700;
+  font-size: 1.4111vw;
+  line-height: 1.9402vw;
+}
+
+/* ===================================================================:: */
+/* hidden inputs
+-> https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+-> https://markheath.net/post/customize-radio-button-css
+*/
+#imagem,
+.edit-registered-coordenada,
+#open-on-weekends-true,
+#open-on-weekends-false {
+  position: absolute;
+  overflow: hidden;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================================================================:: */
+/* confirm button */
+.edit-registered-submit-button {
+  margin-top: 5.6444vw;
+
+  width: 100%;
+  height: 5.6444vw;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--submit-button);
+  border-radius: 1.7638vw;
+  color: var(--background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5875vw;
+  font-style: italic;
+
+  transition: background-color 0.2s;
+}
+.edit-registered-submit-button:hover {
+  background-color: var(--hover-submit-button);
+}
+/* ===================================================================:: */
+/* spacing */
+#edit-registered fieldset {
+  border: none;
+}
+#edit-registered fieldset + fieldset {
+  margin-top: 7.0555vw;
+}
+.edit-registered-input-data + .edit-registered-input-data,
+.edit-registered-map-do + .edit-registered-input-data {
+  margin-top: 2.1166vw;
+}
+#edit-registered label + input,
+#edit-registered label + label,
+#edit-registered label + textarea,
+#edit-registered label + .edit-registered-button-select {
+  margin-top: 0.7055vw;
+}
+#edit-registered input,
+#edit-registered textarea {
+  padding: 2.293vw 1.5875vw;
+}
+/* ===================================================================:: */
+/* MAP */
+.edit-registered-map-do {
+  background-color: var(--background);
+  border-radius: 1.7638vw;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.edit-registered-map {
+  width: 100%;
+  height: 24.6944vw;
+  border-radius: 1.7638vw 1.7638vw 0 0;
+
+  border: none;
+}
+.edit-registered-do {
+  width: 100%;
+  height: 2.6458vw;
+  border-radius: 0 0 1.7638vw 1.7638vw;
+  color: var(--blue);
+
+  font-size: 1.1465vw;
+  font-weight: 700;
+
+  border: none;
+
+  padding: 1.7638vw 1.3229vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===================================================================:: */
+/* Input name */
+/* Input opening_hours */
+.edit-registered-name,
+.edit-registered-opening-hours {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
+
+  font-size: 1.4111vw;
+  border: none;
+}
+/* ===================================================================:: */
+/* Textarea about */
+/* Textarea instructions */
+.edit-registered-about,
+.edit-registered-instructions {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 10.5833vw;
+  border-radius: 1.7638vw;
+
+  font-size: 1.4111vw;
+
+  border: none;
+  resize: none;
+}
+/* ===================================================================:: */
+/* Radio Buttons */
+.edit-registered-button-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.edit-registered-button-true,
+.edit-registered-button-false {
+  width: 100%;
+  height: 5.6444vw;
+
+  background: var(--valid-data);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-registered-button-true:hover,
+.edit-registered-button-false:hover {
+  background-color: var(--hover-button);
+}
+input[type="radio"]:checked + .edit-registered-button-true,
+input[type="radio"]:checked + .edit-registered-button-false {
+  background-color: var(--select-button);
+  border: 0.1323vw solid var(--border-select-button);
+}
+.edit-registered-button-true {
+  border-radius: 1.7638vw 0 0 1.7638vw;
+}
+.edit-registered-button-false {
+  border-radius: 0 1.7638vw 1.7638vw 0;
+  border-left: 0;
+}
+/* ===================================================================:: */
+/* Eliminate focus */
+#edit-registered input:focus,
+#edit-registered textarea:focus,
+#edit-registered button:focus {
+  outline: none;
+}
+/* ===================================================================:: */
+/* Input and textarea animation for errors */
+.invalid {
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: var(--invalid-data);
+}
+.valid {
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: var(--valid-data);
+}
+.valid-pictures {
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: var(--valid-data);
+  border: 0.0881vw dashed var(--blue);
+}
+.valid-plus {
+  color: var(--blue);
+}
+.invalid-plus {
+  color: var(--invalid-plus);
+}
+/* ===================================================================:: */
+/* Customization style errors */
+.error {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.error-message {
+  color: var(--msg-error);
+  font-size: 1.2vw;
+  padding: 0.7055vw 1.5875vw 0 1.5875vw;
+}
+.error-message::before {
+  display: inline;
+  content: "❌ ";
+}
+
+/* ===================================================================:: */
+/* Pictures */
+.edit-registered-container {
+  margin-top: 0.65vw;
+  margin-bottom: 0.65vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1vw;
+}
+.edit-registered-grid-imgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.edit-registered-imgs {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+  border-radius: 1vw;
+  z-index: 0;
+}
+.edit-registered-cross-imgs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3vw;
+  height: 3vw;
+  background-color: rgba(255, 0, 0, 0.548);
+  z-index: 5;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  padding: 0.75vw 0.75vw 0 0;
+  border-radius: 0 1vw 0 3vw;
+
+  border: none;
+  cursor: pointer;
+}
+.edit-registered-cross-imgs:focus {
+  outline: none;
+}
+.edit-registered-cross-icon {
+  color: var(--background);
+  width: 1vw;
+  height: 1vw;
+}
+.edit-registered-pictures {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
+
+  font-size: 1.4111vw;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-registered-plus {
+  width: 2.1166vw;
+  height: 2.1166vw;
+}
