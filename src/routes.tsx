@@ -13,6 +13,7 @@ import PrivateRoute from "./components/routes/PrivateRoute";
 import Editpending from "./screens/dashboard/EditPending";
 import Deletepage from "./screens/dashboard/Delete";
 import Editregistered from "./screens/dashboard/EditRegistered";
+import Forgotpage from "./screens/Forgot";
 
 function Routes() {
   return (
@@ -24,6 +25,7 @@ function Routes() {
         <Route exact path="/map/create/success" component={Successpage} />
         <Route exact path="/orphanage/:_id" component={Detailpage} />
         <Route exact path="/dashboard/login" component={Loginpage} />
+        <Route exact path="/dashboard/forgot" component={Forgotpage} />
         <PrivateRoute
           exact
           path="/dashboard/registered"
