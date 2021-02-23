@@ -1,16 +1,16 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
 import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
-import { FiPlus } from "react-icons/fi";
-import { SubmitHandler, useForm } from "react-hook-form";
+import mapIcon from "../../../utils/mapIcon";
 import api from "../../../services/api";
 import SidebarPublic from "../../../components/SidebarPublic";
-import mapIcon from "../../../utils/mapIcon";
+import { Orphanage, OrphanageParams } from "../../../interfaces/orphanages";
+import { FiPlus } from "react-icons/fi";
+import { ImCross } from "react-icons/im";
 
 import "./styles.css";
 import "leaflet/dist/leaflet.css";
-import { Orphanage, OrphanageParams } from "../../../interfaces/orphanages";
-import { ImCross } from "react-icons/im";
 
 interface UserData {
   name: string;
@@ -41,6 +41,7 @@ function Editregistered() {
     longitude: 0,
   });
   const [allImages, setAllImages] = useState<PictureData[]>([]);
+  const [removeImages, setRemoveImages] = useState<any[]>([]);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const params = useParams<OrphanageParams>();
 
@@ -51,19 +52,10 @@ function Editregistered() {
     });
   }, [params._id]);
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    setValue,
-    errors,
-  } = useForm<UserData>();
+  const { register, handleSubmit, setValue, errors } = useForm<UserData>();
 
-  function fetchAPI(data: UserData) {
-    console.log(data);
-    // e?.nativeEvent;
-    // e?.defaultPrevented;
-    // e?.preventDefault();
+  const onSubmit: SubmitHandler<UserData> = async (data) => {
+    // console.log(data);
     const multipartForm = new FormData();
     multipartForm.append("name", data.name);
     multipartForm.append("about", data.about);
@@ -76,9 +68,13 @@ function Editregistered() {
       multipartForm.append("pictures", image);
     }
 
-    api.put(`/hosting/update?_id=${params._id}`, multipartForm);
+    for (let id of removeImages) {
+      await api.delete(`hosting/picture?delete=${id}`);
+    }
+    await api.put(`/hosting/update?_id=${params._id}`, multipartForm);
     history.push("/dashboard/registered");
-  }
+  };
+
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
     if (!event.target.files) {
       return;
@@ -92,7 +88,7 @@ function Editregistered() {
   }
 
   async function removeImage(idImage: any) {
-    await api.delete(`hosting/picture?delete=${idImage}`);
+    setRemoveImages((oldArray) => [...oldArray, idImage]);
     setAllImages(allImages.filter((elem) => elem._id !== idImage));
   }
 
@@ -120,10 +116,7 @@ function Editregistered() {
       <div className="edit-registered-rightside">
         <form
           className="edit-registered-form"
-          onSubmit={handleSubmit((data, e) => {
-            e?.preventDefault();
-            fetchAPI(data);
-          })}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <fieldset>
             <legend>Dados</legend>
@@ -238,7 +231,7 @@ function Editregistered() {
                     <div key={image._id} className="edit-registered-grid-imgs">
                       <img
                         className="edit-registered-imgs"
-                        src={`/uploads/${image.filename}`}
+                        src={`http://localhost:3333/uploads/${image.filename}`}
                         alt={orphanage.name}
                       />
                       <div

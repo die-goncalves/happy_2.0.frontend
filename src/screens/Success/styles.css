@@ -30,7 +30,7 @@
   line-height: 2.5vw;
   margin: 2.3426vw 0 4.3924vw 0;
 }
-#sp-comeback input {
+#sp-comeback {
   height: 4.686vw;
   padding: 1.464125vw 2.92825vw;
   border-radius: 1.2125vw;
@@ -40,8 +40,10 @@
   font-size: 1.09125vw;
   line-height: 1.515625vw;
   transition: background-color 0.2s;
+
+  text-decoration: none;
 }
-#sp-comeback input:hover {
+#sp-comeback:hover {
   background-color: #3bd689;
 }
 #sp-pictures img {

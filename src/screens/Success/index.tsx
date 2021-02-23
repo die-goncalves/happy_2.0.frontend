@@ -21,7 +21,7 @@ function Successpage() {
           </p>
         </div>
         <Link to="/map" id="sp-comeback">
-          <input type="button" value="Voltar para o mapa" />
+          <p>Voltar para o mapa</p>
         </Link>
       </div>
       <div className="sp-right">

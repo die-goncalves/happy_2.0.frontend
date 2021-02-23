@@ -31,31 +31,7 @@ function Createpage() {
   const [latlng, setLatLng] = useState<latitudelongitude | null>(null);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    setValue,
-    errors,
-  } = useForm<UserData>();
-
-  const onSubmit = async (data: UserData) => {
-    // console.log(data);
-    const multipartForm = new FormData();
-    multipartForm.append("name", data.name);
-    multipartForm.append("about", data.about);
-    multipartForm.append("latitude", String(data.latitude));
-    multipartForm.append("longitude", String(data.longitude));
-    multipartForm.append("instructions", data.instructions);
-    multipartForm.append("opening_hours", data.opening_hours);
-    multipartForm.append("open_on_weekends", String(data.open_on_weekends));
-    for (const image of data.pictures) {
-      multipartForm.append("pictures", image);
-    }
-
-    await api.post("/hosting/create", multipartForm);
-    history.push("/map/create/success");
-  };
+  const { register, handleSubmit, setValue, errors } = useForm<UserData>();
 
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
     if (!event.target.files) {
@@ -90,7 +66,7 @@ function Createpage() {
       <SidebarPublic path="/map" />
 
       <div className="create-page-rightside">
-        <form className="create-page-form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="create-page-form">
           <fieldset>
             <legend>Dados</legend>
             <div className="create-page-map-do">
@@ -320,7 +296,29 @@ function Createpage() {
               ) : null}
             </div>
           </fieldset>
-          <button className="create-page-submit-button" type="submit">
+          <button
+            className="create-page-submit-button"
+            onClick={handleSubmit((data) => {
+              // console.log(data);
+              const multipartForm = new FormData();
+              multipartForm.append("name", data.name);
+              multipartForm.append("about", data.about);
+              multipartForm.append("latitude", String(data.latitude));
+              multipartForm.append("longitude", String(data.longitude));
+              multipartForm.append("instructions", data.instructions);
+              multipartForm.append("opening_hours", data.opening_hours);
+              multipartForm.append(
+                "open_on_weekends",
+                String(data.open_on_weekends)
+              );
+              for (const image of data.pictures) {
+                multipartForm.append("pictures", image);
+              }
+              api
+                .post("/hosting/create", multipartForm)
+                .then(() => history.push("/map/create/success"));
+            })}
+          >
             Confirmar
           </button>
         </form>

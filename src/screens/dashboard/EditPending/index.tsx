@@ -1,6 +1,6 @@
-import React, { ChangeEvent, useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { TiDeleteOutline } from "react-icons/ti";
 import { BiCheck } from "react-icons/bi";
 import { FiPlus } from "react-icons/fi";
@@ -95,7 +95,7 @@ function Editpending() {
                   return (
                     <img
                       key={image._id}
-                      src={`/uploads/${image.filename}`}
+                      src={`http://localhost:3333/uploads/${image.filename}`}
                       alt={orphanage.name}
                     />
                   );

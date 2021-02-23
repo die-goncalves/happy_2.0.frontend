@@ -91,8 +91,7 @@ function Detailpage() {
         <div className="detail-page-orphanage">
           <img
             className="detail-page-picture-focus"
-            src={`/uploads/${orphanage.pictures[activeImageIndex].filename}`}
-            // src={`${orphanage.pictures[activeImageIndex].destination}/${orphanage.pictures[activeImageIndex].filename}`}
+            src={`http://localhost:3333/uploads/${orphanage.pictures[activeImageIndex].filename}`}
             alt={orphanage.name}
           />
 
@@ -115,7 +114,7 @@ function Detailpage() {
                       }}
                     >
                       <img
-                        src={`/uploads/${image.filename}`}
+                        src={`http://localhost:3333/uploads/${image.filename}`}
                         alt={orphanage.name}
                       />
                     </button>
