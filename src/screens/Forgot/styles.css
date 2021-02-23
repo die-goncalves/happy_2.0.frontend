@@ -1,0 +1,242 @@
+#forgot-page {
+  width: 100vw;
+  height: 100vh;
+
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+
+  display: flex;
+}
+.forgot-page-left {
+  width: 60vw;
+  height: inherit;
+  background-color: var(--background);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#forgot-page-logotipo img {
+  width: 18.056vw;
+  margin-bottom: 6.9445vw;
+}
+#forgot-page-city {
+  font-size: 1.71vw;
+  line-height: 2.428vw;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  color: var(--blue);
+}
+.forgot-page-right {
+  width: 40vw;
+  height: inherit;
+  border-left: 0.25vw solid var(--blue);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forgot-page-form {
+  width: auto;
+  height: auto;
+  background-color: white;
+}
+.forgot-page-form fieldset {
+  border: none;
+}
+
+.forgot-page-input-email {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================================================================:: */
+/* inputs */
+.forgot-page-input-email input {
+  height: 4.167vw;
+  border: none;
+  border-radius: 1.388vw;
+  padding: 1.666vw 1.458vw;
+
+  font-size: 1.111vw;
+}
+#forgot-page input:focus,
+#forgot-page button:focus {
+  outline: none;
+}
+/* ===================================================================:: */
+/* legend */
+.forgot-page-form legend {
+  text-align: start;
+  margin-bottom: 2.7778vw;
+  font-size: 2.222vw;
+  font-weight: 700;
+  line-height: 2.361vw;
+  color: var(--blue);
+}
+/* ===================================================================:: */
+/* labels */
+.forgot-page-form label {
+  font-size: 1.12vw;
+  line-height: 1.53vw;
+  margin-bottom: 0.65vw;
+  color: var(--blue);
+}
+/* ===================================================================:: */
+/* Recognize */
+.forgot-page-recognize-button {
+  width: 25vw;
+  margin-top: 2.777vw;
+}
+.forgot-page-recognize {
+  width: 100%;
+  height: 4.167vw;
+  padding: 1.666vw 1.458vw;
+  margin-bottom: 0.65vw;
+
+  background-color: var(--invalid-data);
+  border-radius: 1.3888vw;
+  border: 0.0694vw solid rgba(255, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.903vw;
+  color: var(--msg-error);
+}
+.forgot-page-recognize span {
+  background-color: rgba(255, 0, 0, 0.185);
+  padding: 0 0.5vw 0 0.5vw;
+  border-radius: 0.35vw;
+  margin-right: 0.5vw;
+}
+/* ===================================================================:: */
+/* confirm button */
+.forgot-page-submit-button,
+.forgot-page-button-check {
+  width: 100%;
+  height: 4.167vw;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--submit-button);
+  border-radius: 1.3888vw;
+  color: var(--background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.112vw;
+  font-style: italic;
+
+  transition: background-color 0.2s;
+}
+.forgot-page-submit-button:hover {
+  background-color: var(--hover-submit-button);
+}
+/* ===================================================================:: */
+/* button comeback */
+#forgot-page .voltar {
+  position: absolute;
+  top: 3vw;
+  right: 3vw;
+}
+.forgot-page-box-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.7778vw;
+  height: 2.7778vw;
+
+  border-radius: 1.111vw;
+
+  padding: 0.8333vw;
+  background-color: var(--blue);
+
+  transition: background-color 0.2s;
+}
+
+.forgot-page-box-arrow:hover {
+  background: var(--blue-weak);
+}
+
+.forgot-page-arrow {
+  width: max-content;
+  height: max-content;
+
+  color: var(--background);
+  transition: color 0.5s;
+}
+/* ===================================================================:: */
+/* Input and textarea animation for errors */
+#forgot-page .invalid {
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 0, 0, 0.5);
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: var(--invalid-data);
+}
+#forgot-page .valid {
+  transition: box-shadow 0.2s linear, background-color 0.2s linear;
+  background-color: var(--valid-data);
+}
+/* ===================================================================:: */
+/* Customization style errors */
+#forgot-page .error {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#forgot-page .error-message {
+  color: var(--msg-error);
+  font-size: 0.903vw;
+  padding-top: 0.347vw;
+  padding-left: 1.458vw;
+}
+#forgot-page .error-message::before {
+  display: inline;
+  content: "❌ ";
+}
+
+/* ===================================================================:: */
+/* Info */
+.forgot-page-info {
+  width: 25vw;
+  font-size: 1.12vw;
+  margin-bottom: 2.7778vw;
+  color: var(--blue);
+}
+.forgot-page-check {
+  width: 2.5vw;
+  height: 2.5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-page-check .icon-check {
+  width: 100%;
+  height: 100%;
+  color: var(--background);
+}
+.forgot-page-button-check {
+  cursor: default;
+}
+.forgot-page-inside-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.forgot-page-inside-button p {
+  color: var(--background);
+  font-size: 1.12vw;
+  font-style: normal;
+  margin-right: 3vw;
+}
