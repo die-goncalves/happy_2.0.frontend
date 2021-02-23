@@ -132,7 +132,7 @@ function Loginpage() {
                 <input
                   id="input-esqueci"
                   type="button"
-                  onClick={() => console.log("redirecionar")}
+                  onClick={() => history.push("/dashboard/forgot")}
                 />
               </div>
             </div>
