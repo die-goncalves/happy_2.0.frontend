@@ -14,6 +14,7 @@ import Editpending from "./screens/dashboard/EditPending";
 import Deletepage from "./screens/dashboard/Delete";
 import Editregistered from "./screens/dashboard/EditRegistered";
 import Forgotpage from "./screens/Forgot";
+import Resetpage from "./screens/Reset";
 
 function Routes() {
   return (
@@ -26,6 +27,7 @@ function Routes() {
         <Route exact path="/orphanage/:_id" component={Detailpage} />
         <Route exact path="/dashboard/login" component={Loginpage} />
         <Route exact path="/dashboard/forgot" component={Forgotpage} />
+        <Route exact path="/reset-password" component={Resetpage} />
         <PrivateRoute
           exact
           path="/dashboard/registered"
