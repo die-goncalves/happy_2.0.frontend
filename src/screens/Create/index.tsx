@@ -9,6 +9,7 @@ import mapIcon from "../../utils/mapIcon";
 
 import "./styles.css";
 import "leaflet/dist/leaflet.css";
+import { ImSpinner } from "react-icons/im";
 
 interface UserData {
   name: string;
@@ -30,6 +31,7 @@ function Createpage() {
   const history = useHistory();
   const [latlng, setLatLng] = useState<latitudelongitude | null>(null);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
+  const [savingOrphanage, setSavingOrphanage] = useState<boolean>(false);
 
   const { register, handleSubmit, setValue, errors } = useForm<UserData>();
 
@@ -299,6 +301,7 @@ function Createpage() {
           <button
             className="create-page-submit-button"
             onClick={handleSubmit((data) => {
+              setSavingOrphanage(true);
               // console.log(data);
               const multipartForm = new FormData();
               multipartForm.append("name", data.name);
@@ -319,7 +322,12 @@ function Createpage() {
                 .then(() => history.push("/map/create/success"));
             })}
           >
-            Confirmar
+            <p>Confirmar</p>
+            {savingOrphanage && (
+              <div className="create-page-spinner">
+                <ImSpinner className="create-page-fa-spin" />
+              </div>
+            )}
           </button>
         </form>
       </div>
