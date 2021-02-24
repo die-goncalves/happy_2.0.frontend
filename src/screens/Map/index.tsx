@@ -28,24 +28,28 @@ function Mappage() {
             <br />
             no mapa
           </h1>
-          <br />
+
           <p className="mp-description">
             Muitas crianças estão
             <br />
             esperando a sua visita <FaRegSmileBeam />{" "}
           </p>
+
+          <div className="map-page-options">
+            <Link to="/" className="map-page-box">
+              <p>Voltar ao ínicio</p>
+            </Link>
+            <Link to="/map/create" className="map-page-box">
+              <p>Criar orfanato</p>
+            </Link>
+          </div>
         </div>
         <div className="mp-city">
           <strong>Jaguaré</strong>
           <span>Espírito Santo</span>
         </div>
       </div>
-      <div className="mp-grid-world">
-        <div className="mp-register">
-          <Link to={`/map/create`} className="mp-button">
-            <FaPlus className="map-page-icon" />
-          </Link>
-        </div>
+      <div className="mp-world">
         <div className="mp-map">
           <WorldMap orphanages={orphanages} />
         </div>

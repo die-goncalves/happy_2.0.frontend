@@ -5,10 +5,11 @@
   background: var(--background);
   position: relative;
   display: flex;
+  z-index: 1;
 }
 
 #mp .mp-side {
-  width: 27.7777%;
+  width: 28%;
   height: inherit;
 
   display: flex;
@@ -27,16 +28,48 @@
   background-position: left center;
 }
 #mp .mp-side .mp-text {
-  padding-bottom: 10vw;
+  padding-bottom: 7vw;
 }
 #mp .mp-side .mp-text .mp-title {
   font-size: 2.7777vw;
   font-weight: 700;
+  margin-bottom: 1.5vw;
 }
 #mp .mp-side .mp-text .mp-description {
   font-size: 1.25vw;
   font-weight: 400;
+  margin-bottom: 3vw;
 }
+.map-page-options {
+  display: flex;
+  padding-right: 3vw;
+}
+.map-page-options a:first-child {
+  margin-right: 1.5vw;
+}
+.map-page-box {
+  width: 10vw;
+  height: 5vw;
+  border-radius: 1vw;
+
+  background-color: var(--blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.map-page-box p {
+  color: var(--background);
+  font-size: 1.25vw;
+  font-weight: 400;
+}
+.map-page-box:hover {
+  background-color: var(--blue-weak);
+}
+
 #mp .mp-side .mp-city {
   display: flex;
   flex-direction: column;
@@ -44,64 +77,16 @@
   font-size: 1.25vw;
 }
 
-#mp .mp-grid-world {
-  display: grid;
-  width: 72.2223%;
-  height: inherit;
-  grid-template-columns: 0.22223fr repeat(7, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  gap: 0% 0%;
-}
-#mp .mp-grid-world .mp-register {
-  grid-area: 9 / 7 / 11 / 9;
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-
-  padding-right: 3vw;
-  padding-bottom: 3vw;
-}
-#mp .mp-grid-world .mp-register .mp-button {
-  background-color: var(--yellow);
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-
+#mp .mp-world {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  z-index: 10;
-  transition: background-color 0.2s;
+  width: 72%;
+  height: inherit;
+  background-color: khaki;
+  z-index: 1000;
 }
-#mp .mp-grid-world .mp-register .mp-button:hover {
-  background-color: var(--yellow-weak);
-}
-.map-page-icon {
-  width: 15px;
-  height: 15px;
-  color: var(--blue);
-  transition: color 0.2s;
-}
-#mp .mp-grid-world .mp-register .mp-button:hover .map-page-icon {
-  color: var(--blue-weak);
-}
-#mp .mp-grid-world .mp-map {
-  grid-area: 1 / 1 / 11 / 9;
+#mp .mp-world .mp-map {
   width: 100%;
-  height: 100%;
-  z-index: 5;
-}
-
-/*
- * div mp-map
- *  div worldmap
- *    css map world-map
- */
-#mp .mp-grid-world .mp-map .worldmap {
-  width: inherit;
   height: inherit;
 }
