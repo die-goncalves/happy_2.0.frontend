@@ -168,11 +168,10 @@
 }
 
 .forgot-page-arrow {
-  width: max-content;
-  height: max-content;
+  width: 100%;
+  height: 100%;
 
   color: var(--background);
-  transition: color 0.5s;
 }
 /* ===================================================================:: */
 /* Input and textarea animation for errors */
