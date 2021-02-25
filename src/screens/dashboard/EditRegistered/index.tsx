@@ -111,7 +111,7 @@ function Editregistered() {
 
   return (
     <div id="edit-registered">
-      <SidebarPublic path="/map" />
+      <SidebarPublic path="/dashboard/registered" />
 
       <div className="edit-registered-rightside">
         <form
