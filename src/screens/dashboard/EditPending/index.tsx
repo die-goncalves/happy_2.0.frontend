@@ -34,7 +34,62 @@ function Editpending() {
   }, [params._id]);
 
   if (!orphanage) {
-    return <div>carregando ...</div>;
+    return (
+      <div id="edit-pending">
+        <SidebarPublic path="/dashboard/pending" />
+
+        <div className="skeleton-right-side">
+          <section className="skeleton-section">
+            <fieldset>
+              <div className="skeleton-dados animate"></div>
+              <div className="skeleton-hr"></div>
+              <div className="skeleton-map-do">
+                <div className="skeleton-map animate"></div>
+                <div className="skeleton-do animate"></div>
+              </div>
+              <div className="skeleton-input-data">
+                <div className="skeleton-name animate"></div>
+                <div className="skeleton-box-input animate"></div>
+              </div>
+              <div className="skeleton-input-data">
+                <div className="skeleton-sobre animate"></div>
+                <div className="skeleton-box-textarea animate"></div>
+              </div>
+              <div className="skeleton-input-data">
+                <div className="skeleton-fotos animate"></div>
+                <div className="skeleton-list-pictures">
+                  <div className="skeleton-list-pictures-a animate"></div>
+                  <div className="skeleton-list-pictures-b animate"></div>
+                  <div className="skeleton-list-pictures-c animate"></div>
+                </div>
+                <div className="skeleton-box-input animate"></div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div className="skeleton-visitacao animate"></div>
+              <div className="skeleton-hr"></div>
+              <div className="skeleton-input-data">
+                <div className="skeleton-instructions animate"></div>
+                <div className="skeleton-box-input animate"></div>
+              </div>
+              <div className="skeleton-input-data">
+                <div className="skeleton-opening-hours animate"></div>
+                <div className="skeleton-box-input animate"></div>
+              </div>
+              <div className="skeleton-input-data">
+                <div className="skeleton-atende animate"></div>
+                <div className="skeleton-box-input animate"></div>
+              </div>
+            </fieldset>
+          </section>
+
+          <div className="skeleton-refuse-accept">
+            <div className="skeleton-refuse animate"></div>
+            <div className="skeleton-accept animate"></div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

@@ -7,7 +7,8 @@
 }
 /* ===================================================================:: */
 /* form */
-.edit-pending-rightside {
+.edit-pending-rightside,
+#edit-pending .skeleton-right-side {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -23,7 +24,8 @@
   justify-content: center;
 }
 
-.edit-pending-section {
+.edit-pending-section,
+#edit-pending .skeleton-section {
   width: 75%;
   margin: auto;
 
@@ -84,14 +86,16 @@
   flex-direction: column;
   align-items: center;
 }
-.edit-pending-map {
+.edit-pending-map,
+#edit-pending .skeleton-map {
   width: 100%;
   height: 24.6944vw;
   border-radius: 1.7638vw 1.7638vw 0 0;
 
   border: none;
 }
-.edit-pending-do {
+.edit-pending-do,
+#edit-pending .skeleton-do {
   width: 100%;
   height: 2.6458vw;
   border-radius: 0 0 1.7638vw 1.7638vw;
@@ -226,7 +230,8 @@
 
 /* ===================================================================:: */
 /* refuse accept */
-.edit-pending-refuse-accept {
+.edit-pending-refuse-accept,
+#edit-pending .skeleton-refuse-accept {
   width: 75%;
   margin: auto;
   /* height: 14.1111vw; */
@@ -239,7 +244,9 @@
   justify-content: space-between;
 }
 .edit-pending-refuse,
-.edit-pending-accept {
+.edit-pending-accept,
+#edit-pending .skeleton-refuse,
+#edit-pending .skeleton-accept {
   width: 28vw;
   height: 5.6444vw;
   border-radius: 1.7638vw 1.7638vw 1.7638vw 1.7638vw;
@@ -264,4 +271,152 @@
   width: 2.1166vw;
   height: 2.1166vw;
   margin-right: 1vw;
+}
+
+/* ===================================================================:: */
+/* skeleton */
+#edit-pending .skeleton-dados,
+#edit-pending .skeleton-visitacao {
+  width: 9vw;
+  height: 3vw;
+  margin-bottom: 3.5277vw;
+  padding-bottom: 2.1166vw;
+}
+#edit-pending .skeleton-visitacao {
+  width: 15vw;
+}
+#edit-pending .skeleton-map,
+#edit-pending .skeleton-do,
+#edit-pending .skeleton-dados,
+#edit-pending .skeleton-visitacao,
+#edit-pending .skeleton-name,
+#edit-pending .skeleton-box-input,
+#edit-pending .skeleton-sobre,
+#edit-pending .skeleton-box-textarea,
+#edit-pending .skeleton-fotos,
+#edit-pending .skeleton-instructions,
+#edit-pending .skeleton-opening-hours,
+#edit-pending .skeleton-atende,
+#edit-pending .skeleton-refuse,
+#edit-pending .skeleton-accept,
+#edit-pending .skeleton-list-pictures-a,
+#edit-pending .skeleton-list-pictures-b,
+#edit-pending .skeleton-list-pictures-c,
+#edit-pending .skeleton-hr {
+  background-color: var(--skeleton);
+}
+#edit-pending .skeleton-map-do {
+  border-radius: 1.7638vw;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#edit-pending .skeleton-input-data + .skeleton-input-data,
+#edit-pending .skeleton-map-do + .skeleton-input-data {
+  margin-top: 2.1166vw;
+}
+#edit-pending .skeleton-name,
+#edit-pending .skeleton-sobre,
+#edit-pending .skeleton-fotos,
+#edit-pending .skeleton-instructions,
+#edit-pending .skeleton-opening-hours,
+#edit-pending .skeleton-atende {
+  width: 4.5vw;
+  height: 2vw;
+  margin-bottom: 0.7055vw;
+}
+#edit-pending .skeleton-sobre,
+#edit-pending .skeleton-fotos {
+  width: 5.5vw;
+}
+#edit-pending .skeleton-atende {
+  width: 13vw;
+}
+#edit-pending .skeleton-instructions {
+  width: 8vw;
+}
+#edit-pending .skeleton-opening-hours {
+  width: 10.5vw;
+}
+#edit-pending .skeleton-box-input {
+  width: 100%;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
+}
+#edit-pending .skeleton-box-textarea {
+  width: 100%;
+  height: 10.5833vw;
+  border-radius: 1.7638vw;
+}
+#edit-pending .skeleton-list-pictures-a,
+#edit-pending .skeleton-list-pictures-b,
+#edit-pending .skeleton-list-pictures-c {
+  width: 11.2vw;
+  height: 20vw;
+  border-radius: 1vw;
+}
+#edit-pending .skeleton-list-pictures {
+  display: flex;
+  margin-top: 0.65vw;
+  margin-bottom: 0.65vw;
+}
+#edit-pending .skeleton-list-pictures-b,
+#edit-pending .skeleton-list-pictures-c {
+  margin-left: 1vw;
+}
+#edit-pending .skeleton-hr {
+  width: 100%;
+  height: 0.13888vw;
+  margin-bottom: 3.5277vw;
+}
+/* ===================================================================:: */
+/* 
+  SHIMMER based here:
+    https://dev.to/dhilipkmr/the-loading-shimmer-29dc
+*/
+#edit-pending .animate {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #ebebeb3b 0%,
+    #ebebeb80 50%,
+    #ebebeb 100%
+  );
+  background-size: 75vw;
+}
+
+#edit-pending .skeleton-map,
+#edit-pending .skeleton-do,
+#edit-pending .skeleton-dados,
+#edit-pending .skeleton-visitacao,
+#edit-pending .skeleton-name,
+#edit-pending .skeleton-box-input,
+#edit-pending .skeleton-sobre,
+#edit-pending .skeleton-box-textarea,
+#edit-pending .skeleton-fotos,
+#edit-pending .skeleton-instructions,
+#edit-pending .skeleton-opening-hours,
+#edit-pending .skeleton-atende,
+#edit-pending .skeleton-refuse,
+#edit-pending .skeleton-list-pictures-a {
+  animation-delay: 0.0645s;
+}
+#edit-pending .skeleton-accept {
+  animation-delay: 1.49s;
+}
+#edit-pending .skeleton-list-pictures-b {
+  animation-delay: 0.23s;
+}
+#edit-pending .skeleton-list-pictures-c {
+  animation-delay: 0.39s;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -75vw 0;
+  }
+  100% {
+    background-position: 75vw 0;
+  }
 }
