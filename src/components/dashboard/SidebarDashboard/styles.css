@@ -64,6 +64,11 @@
   margin-top: 1.111vw;
 }
 
+/* off */
+.sidebar-dashboard-box-off {
+  border: none;
+  cursor: pointer;
+}
 /* ===================================================================:: */
 /* Navigator clicked */
 .sidebar-dashboard-box-registered-active,

@@ -4,10 +4,13 @@ import mapMarker from "../../../images/map-marker.svg";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { CgLogOff } from "react-icons/cg";
+import { useAuth } from "../../../context/auth-context";
 
 import "./styles.css";
 
 function SidebarDashboard() {
+  const { logOut } = useAuth();
+
   return (
     <div id="sidebar-dashboard">
       <div className="sidebar-dashboard-logo">
@@ -36,9 +39,13 @@ function SidebarDashboard() {
       </div>
 
       <div className="sidebar-dashboard-off">
-        <Link to="/" className="sidebar-dashboard-box-off">
+        <button
+          type="button"
+          className="sidebar-dashboard-box-off"
+          onClick={logOut}
+        >
           <CgLogOff className="sidebar-dashboard-icon-off" />
-        </Link>
+        </button>
       </div>
     </div>
   );
