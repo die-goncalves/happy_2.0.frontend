@@ -83,7 +83,7 @@
   justify-content: center;
   width: 72%;
   height: inherit;
-  background-color: khaki;
+  background-color: var(--background);
   z-index: 1000;
 }
 #mp .mp-world .mp-map {
