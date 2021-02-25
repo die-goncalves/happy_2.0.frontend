@@ -4,7 +4,7 @@
   color: var(--blue);
 }
 .detail-page-rightside,
-.skeleton-right-side {
+#detail-page .skeleton-right-side {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -20,13 +20,13 @@
   justify-content: center;
 }
 .detail-page-orphanage,
-.skeleton-content {
+#detail-page .skeleton-content {
   width: 62.5vw;
   border-radius: 1.6851vw;
   background-color: var(--background);
 }
 .detail-page-picture-focus,
-.skeleton-picture {
+#detail-page .skeleton-picture {
   width: 100%;
   height: 29.6333vw;
 
@@ -34,16 +34,16 @@
   border-radius: 1.7638vw 1.7638vw 0 0;
 }
 .detail-page-below-picture,
-.skeleton-below-picture {
+#detail-page .skeleton-below-picture {
   padding-left: 7.0555vw;
   padding-right: 7.0555vw;
 }
 .detail-page-nome-descricao,
-.skeleton-nome-descricao {
+#detail-page .skeleton-nome-descricao {
   margin-bottom: 5.6444vw;
 }
 .detail-page-nome-descricao h1,
-.skeleton-nome-descricao h1 {
+#detail-page .skeleton-nome-descricao h1 {
   font-size: 4.7625vw;
   margin-bottom: 2.8222vw;
 }
@@ -133,7 +133,7 @@
 /* ===================================================================:: */
 /* map */
 .detail-page-map-container,
-.skeleton-map {
+#detail-page .skeleton-map {
   width: 100%;
   height: 35.2777vw;
 
@@ -180,7 +180,7 @@
 /* ===================================================================:: */
 /* time and open on weekends */
 .detail-page-time-visit,
-.skeleton-buttons {
+#detail-page .skeleton-buttons {
   margin-top: 2.1166vw;
   display: flex;
   align-items: center;
@@ -189,8 +189,8 @@
   margin-bottom: 7.0555vw;
 }
 .detail-page-box,
-.skeleton-button-time,
-.skeleton-button-open-weekends {
+#detail-page .skeleton-button-time,
+#detail-page .skeleton-button-open-weekends {
   width: 45%;
   height: 15.2222vw;
   border-radius: 1.7638vw;
@@ -220,69 +220,69 @@
 
 /* ===================================================================:: */
 /* SKELETON */
-.skeleton-picture,
-.skeleton-nome-descricao h1,
-.skeleton-descricao-a,
-.skeleton-descricao-b,
-.skeleton-list-pictures-a,
-.skeleton-list-pictures-b,
-.skeleton-list-pictures-c,
-.skeleton-map,
-.skeleton-division,
-.skeleton-instructions h2,
-.skeleton-instructions-a,
-.skeleton-instructions-b,
-.skeleton-button-time,
-.skeleton-button-open-weekends {
+#detail-page .skeleton-picture,
+#detail-page .skeleton-nome-descricao h1,
+#detail-page .skeleton-descricao-a,
+#detail-page .skeleton-descricao-b,
+#detail-page .skeleton-list-pictures-a,
+#detail-page .skeleton-list-pictures-b,
+#detail-page .skeleton-list-pictures-c,
+#detail-page .skeleton-map,
+#detail-page .skeleton-division,
+#detail-page .skeleton-instructions h2,
+#detail-page .skeleton-instructions-a,
+#detail-page .skeleton-instructions-b,
+#detail-page .skeleton-button-time,
+#detail-page .skeleton-button-open-weekends {
   background-color: var(--skeleton);
 }
-.skeleton-nome-descricao h1 {
+#detail-page .skeleton-nome-descricao h1 {
   width: 70%;
   height: 4.7625vw;
 }
-.skeleton-descricao-a,
-.skeleton-descricao-b {
+#detail-page .skeleton-descricao-a,
+#detail-page .skeleton-descricao-b {
   width: 100%;
   height: 2.1166vw;
 }
-.skeleton-descricao-b {
+#detail-page .skeleton-descricao-b {
   margin-top: 1vw;
   width: 30%;
 }
-.skeleton-list-pictures {
+#detail-page .skeleton-list-pictures {
   display: flex;
   margin-bottom: 6.8791vw;
 }
-.skeleton-list-pictures-b,
-.skeleton-list-pictures-c {
+#detail-page .skeleton-list-pictures-b,
+#detail-page .skeleton-list-pictures-c {
   margin-left: 1.42vw;
 }
-.skeleton-map {
+#detail-page .skeleton-map {
   border-radius: 1.7638vw;
 }
-.skeleton-division {
+#detail-page .skeleton-division {
   width: 100%;
   height: 1px;
   border: none;
   margin-bottom: 5.6444vw;
 }
-.skeleton-instructions h2 {
+#detail-page .skeleton-instructions h2 {
   width: 60%;
   height: 4.0569vw;
 }
-.skeleton-instructions-a,
-.skeleton-instructions-b {
+#detail-page .skeleton-instructions-a,
+#detail-page .skeleton-instructions-b {
   margin-top: 2.8222vw;
   width: 100%;
   height: 2.1166vw;
 }
-.skeleton-instructions-b {
+#detail-page .skeleton-instructions-b {
   margin-top: 1vw;
   width: 50%;
 }
-.skeleton-list-pictures-a,
-.skeleton-list-pictures-b,
-.skeleton-list-pictures-c {
+#detail-page .skeleton-list-pictures-a,
+#detail-page .skeleton-list-pictures-b,
+#detail-page .skeleton-list-pictures-c {
   width: 15.187vw;
   height: 20vw;
   border-radius: 1vw;
@@ -302,24 +302,24 @@
   );
   background-size: 62.5vw;
 }
-.skeleton-map,
-.skeleton-list-pictures-a,
-.skeleton-descricao-a,
-.skeleton-descricao-b,
-.skeleton-nome-descricao h1,
-.skeleton-instructions h2,
-.skeleton-instructions-a,
-.skeleton-instructions-b,
-.skeleton-button-time {
+#detail-page .skeleton-map,
+#detail-page .skeleton-list-pictures-a,
+#detail-page .skeleton-descricao-a,
+#detail-page .skeleton-descricao-b,
+#detail-page .skeleton-nome-descricao h1,
+#detail-page .skeleton-instructions h2,
+#detail-page .skeleton-instructions-a,
+#detail-page .skeleton-instructions-b,
+#detail-page .skeleton-button-time {
   animation-delay: 0.115s;
 }
-.skeleton-list-pictures-b {
+#detail-page .skeleton-list-pictures-b {
   animation-delay: 0.38s;
 }
-.skeleton-list-pictures-c {
+#detail-page .skeleton-list-pictures-c {
   animation-delay: 0.64s;
 }
-.skeleton-button-open-weekends {
+#detail-page .skeleton-button-open-weekends {
   animation-delay: 1.54s;
 }
 @keyframes shimmer {
