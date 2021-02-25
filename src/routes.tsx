@@ -9,12 +9,12 @@ import Detailpage from "./screens/Detail";
 import Loginpage from "./screens/dashboard/Login";
 import Registeredpage from "./screens/dashboard/Registered";
 import Pendingpage from "./screens/dashboard/Pending";
-import PrivateRoute from "./components/routes/PrivateRoute";
 import Editpending from "./screens/dashboard/EditPending";
 import Deletepage from "./screens/dashboard/Delete";
 import Editregistered from "./screens/dashboard/EditRegistered";
 import Forgotpage from "./screens/Forgot";
 import Resetpage from "./screens/Reset";
+import RestrictRoute from "./components/routes/RestrictRoute";
 
 function Routes() {
   return (
@@ -28,23 +28,27 @@ function Routes() {
         <Route exact path="/dashboard/login" component={Loginpage} />
         <Route exact path="/dashboard/forgot" component={Forgotpage} />
         <Route exact path="/reset-password" component={Resetpage} />
-        <PrivateRoute
+        <RestrictRoute
           exact
           path="/dashboard/registered"
           component={Registeredpage}
         />
-        <PrivateRoute
+        <RestrictRoute
           exact
           path="/dashboard/registered/delete/:_id"
           component={Deletepage}
         />
-        <PrivateRoute
+        <RestrictRoute
           exact
           path="/dashboard/registered/update/:_id"
           component={Editregistered}
         />
-        <PrivateRoute exact path="/dashboard/pending" component={Pendingpage} />
-        <PrivateRoute
+        <RestrictRoute
+          exact
+          path="/dashboard/pending"
+          component={Pendingpage}
+        />
+        <RestrictRoute
           exact
           path="/dashboard/pending/:_id"
           component={Editpending}
