@@ -64,10 +64,6 @@ function Deletepage() {
     });
   }, []);
 
-  if (!orphanage) {
-    return <div>carregando ...</div>;
-  }
-
   return (
     <div id="delete-page">
       <div className="delete-page-left">
@@ -77,7 +73,7 @@ function Deletepage() {
         <div id="delete-page-description">
           <p>
             Você tem certeza que quer <br />
-            excluir {orphanage.name}?
+            excluir {orphanage && orphanage.name}?
           </p>
         </div>
         {spinnerFunction()}
