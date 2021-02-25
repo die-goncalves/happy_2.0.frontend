@@ -11,7 +11,7 @@ import { useAuth } from "../../../context/auth-context";
 interface IFormInput {
   email: string;
   password: string;
-  remember: boolean;
+  remember: string;
 }
 
 function Loginpage() {
@@ -30,7 +30,7 @@ function Loginpage() {
     multipartForm.append("email", data.email);
     multipartForm.append("password", data.password);
 
-    await logIn(multipartForm).then(
+    await logIn(multipartForm, data.remember).then(
       () => {
         setRecognize(0);
         history.push("/dashboard/registered");

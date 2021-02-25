@@ -6,7 +6,7 @@ import jwt_decode from "jwt-decode";
 interface AuthContextData {
   isLoggedIn: boolean;
   isLoading: boolean;
-  logIn(data: FormData): Promise<void>;
+  logIn(data: FormData, remember: string): Promise<void>;
   logOut(): void;
 }
 
@@ -41,11 +41,13 @@ export const AuthProvider = ({ children }: RouteProps) => {
     }
   }, []);
 
-  async function logIn(data: FormData) {
+  async function logIn(data: FormData, remember: string) {
     const response = await api.post("/user/authenticate", data);
 
     api.defaults.headers["authorization"] = `Bearer ${response.data.token}`;
-    localStorage.setItem("@Happy: token", response.data.token);
+    if (remember === "true") {
+      localStorage.setItem("@Happy: token", response.data.token);
+    }
     setIsLoggedIn(true);
   }
 
