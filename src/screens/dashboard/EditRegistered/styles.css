@@ -7,7 +7,8 @@
 }
 /* ===================================================================:: */
 /* form */
-.edit-registered-rightside {
+.edit-registered-rightside,
+#edit-registered .skeleton-right-side {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -22,7 +23,8 @@
   justify-content: center;
 }
 
-.edit-registered-form {
+.edit-registered-form,
+#edit-registered .skeleton-section {
   /* width: 62.5vw;
   border-radius: 1.6851vw;
   background-color: var(--background); */
@@ -133,14 +135,16 @@
   flex-direction: column;
   align-items: center;
 }
-.edit-registered-map {
+.edit-registered-map,
+#edit-registered .skeleton-map {
   width: 100%;
   height: 24.6944vw;
   border-radius: 1.7638vw 1.7638vw 0 0;
 
   border: none;
 }
-.edit-registered-do {
+.edit-registered-do,
+#edit-registered .skeleton-do {
   width: 100%;
   height: 2.6458vw;
   border-radius: 0 0 1.7638vw 1.7638vw;
@@ -337,4 +341,168 @@ input[type="radio"]:checked + .edit-registered-button-false {
 .edit-registered-plus {
   width: 2.1166vw;
   height: 2.1166vw;
+}
+
+/* ===================================================================:: */
+/* skeleton */
+#edit-registered .skeleton-map,
+#edit-registered .skeleton-do,
+#edit-registered .skeleton-dados,
+#edit-registered .skeleton-visitacao,
+#edit-registered .skeleton-name,
+#edit-registered .skeleton-box-input,
+#edit-registered .skeleton-sobre,
+#edit-registered .skeleton-box-textarea,
+#edit-registered .skeleton-fotos,
+#edit-registered .skeleton-instructions,
+#edit-registered .skeleton-opening-hours,
+#edit-registered .skeleton-atende,
+#edit-registered .skeleton-submit-button,
+#edit-registered .skeleton-list-pictures-a,
+#edit-registered .skeleton-list-pictures-b,
+#edit-registered .skeleton-list-pictures-c,
+#edit-registered .skeleton-hr {
+  background-color: var(--skeleton);
+}
+#edit-registered .skeleton-dados,
+#edit-registered .skeleton-visitacao {
+  width: 9vw;
+  height: 3vw;
+  margin-bottom: 3.5277vw;
+  padding-bottom: 2.1166vw;
+}
+#edit-registered .skeleton-visitacao {
+  width: 15vw;
+}
+
+#edit-registered .skeleton-map-do {
+  border-radius: 1.7638vw;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#edit-registered .skeleton-input-data + .skeleton-input-data,
+#edit-registered .skeleton-map-do + .skeleton-input-data {
+  margin-top: 2.1166vw;
+}
+#edit-registered .skeleton-name,
+#edit-registered .skeleton-sobre,
+#edit-registered .skeleton-fotos,
+#edit-registered .skeleton-instructions,
+#edit-registered .skeleton-opening-hours,
+#edit-registered .skeleton-atende {
+  width: 4.5vw;
+  height: 2vw;
+  margin-bottom: 0.7055vw;
+}
+#edit-registered .skeleton-sobre,
+#edit-registered .skeleton-fotos {
+  width: 5.5vw;
+}
+#edit-registered .skeleton-atende {
+  width: 13vw;
+}
+#edit-registered .skeleton-instructions {
+  width: 8vw;
+}
+#edit-registered .skeleton-opening-hours {
+  width: 10.5vw;
+}
+#edit-registered .skeleton-box-input {
+  width: 100%;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#edit-registered .skeleton-box-textarea {
+  width: 100%;
+  height: 10.5833vw;
+  border-radius: 1.7638vw;
+}
+#edit-registered .skeleton-submit-button {
+  margin-top: 5.6444vw;
+  width: 100%;
+  height: 5.6444vw;
+  border-radius: 1.7638vw;
+}
+#edit-registered .skeleton-box-input div {
+  width: 0.13888vw;
+  height: 100%;
+  background-color: var(--background);
+}
+#edit-registered .skeleton-hr {
+  width: 100%;
+  height: 0.13888vw;
+  margin-bottom: 3.5277vw;
+}
+#edit-registered .skeleton-list-pictures-a,
+#edit-registered .skeleton-list-pictures-b,
+#edit-registered .skeleton-list-pictures-c {
+  width: 11.2vw;
+  height: 20vw;
+  border-radius: 1vw;
+}
+#edit-registered .skeleton-list-pictures {
+  display: flex;
+  margin-top: 0.65vw;
+  margin-bottom: 0.65vw;
+}
+#edit-registered .skeleton-list-pictures-b,
+#edit-registered .skeleton-list-pictures-c {
+  margin-left: 1vw;
+}
+
+/* ===================================================================:: */
+/* 
+  SHIMMER based here:
+    https://dev.to/dhilipkmr/the-loading-shimmer-29dc
+*/
+#edit-registered .animate {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #ebebeb3b 0%,
+    #ebebeb80 50%,
+    #ebebeb 100%
+  );
+  background-size: 75vw;
+}
+
+#edit-registered .skeleton-map,
+#edit-registered .skeleton-do,
+#edit-registered .skeleton-dados,
+#edit-registered .skeleton-visitacao,
+#edit-registered .skeleton-name,
+#edit-registered .skeleton-box-input,
+#edit-registered .skeleton-sobre,
+#edit-registered .skeleton-box-textarea,
+#edit-registered .skeleton-fotos,
+#edit-registered .skeleton-instructions,
+#edit-registered .skeleton-opening-hours,
+#edit-registered .skeleton-atende,
+#edit-registered .skeleton-refuse,
+#edit-registered .skeleton-list-pictures-a {
+  animation-delay: 0.0645s;
+}
+#edit-registered .skeleton-accept {
+  animation-delay: 1.49s;
+}
+#edit-registered .skeleton-list-pictures-b {
+  animation-delay: 0.23s;
+}
+#edit-registered .skeleton-list-pictures-c {
+  animation-delay: 0.39s;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -75vw 0;
+  }
+  100% {
+    background-position: 75vw 0;
+  }
 }
