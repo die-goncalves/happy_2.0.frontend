@@ -80,9 +80,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5vw 0 1.5vw;
-  text-decoration: none;
+  border: none;
+  cursor: pointer;
 
   transition: background-color 0.2s;
+}
+#home-page .restrict .home-page-box-key:focus {
+  outline: none;
 }
 #home-page .restrict .home-page-box-key span {
   font-size: 1.5vw;
