@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
@@ -13,21 +13,23 @@ import "./WorldMap.css";
 export default function WorldMap({ orphanages }: OrphanagesWorldProps) {
   const [pos, setpos] = useState<GeolocationPosition | null>(null);
 
-  if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(
-      function (location) {
-        setpos(location);
-      },
-      function (error) {
-        console.error(`ERROR(${error.code}): ${error.message}`);
-        setpos(null);
-      },
-      { enableHighAccuracy: true }
-    );
-  } else {
-    console.error("Geolocation is not supported by your browser");
-    setpos(null);
-  }
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        function (location) {
+          setpos(location);
+        },
+        function (error) {
+          console.error(`ERROR(${error.code}): ${error.message}`);
+          setpos(null);
+        },
+        { enableHighAccuracy: true }
+      );
+    } else {
+      console.error("Geolocation is not supported by your browser");
+      setpos(null);
+    }
+  }, []);
 
   return (
     <MapContainer
