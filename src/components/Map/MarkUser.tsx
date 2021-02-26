@@ -29,9 +29,9 @@ export default function MarkUser({ mylocation }: LocationParams) {
         <h1>Você</h1>
         <span>Posição central:</span>
         <p>
-          Latitude: {latlng[0]}
+          Latitude: {latlng[0].toFixed(2)}
           <br />
-          Longitude: {latlng[1]}
+          Longitude: {latlng[1].toFixed(2)}
         </p>
       </Popup>
       <Circle
