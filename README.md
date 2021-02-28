@@ -106,7 +106,7 @@ https://github.com/rocketseat-education/nlw-03-omnistack
 		</th>
 		<th>
 			<a href="https://nextlevelweek.com/">
-				<img width="200" height="180" src="logo nlw3.svg">
+				<img width="200" height="180" src="/assets/logo nlw3.svg">
 				<br /><sub><b>Next Level Week #03</b></sub>
 			</a>
 		</th>
